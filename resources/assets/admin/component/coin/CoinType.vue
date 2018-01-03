@@ -11,7 +11,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             币类型列表
-            <router-link tag="a" class="btn btn-link pull-right btn-xs" to="/gold/types/add" role="button">
+            <router-link tag="a" class="btn btn-link pull-right btn-xs" to="/coin/types/add" role="button">
               <span class="glyphicon glyphicon-plus"></span>
               添加
             </router-link>
@@ -21,8 +21,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>中文名称</th>
-                        <th>缩写</th>
+                        <th>币名</th>
+                        <th>中文名称</th>  
                         <th>状态</th>
                         <th>操作</th>
                     </tr>
@@ -34,7 +34,7 @@
                         <tr v-for="type in types">
                           <td>{{ type.id }}</td>
                           <td>{{ type.name }}</td>
-                          <td>{{ type.unit }}</td>
+                          <td>{{ type.label }}</td>
                           <td>
                              <span :class="type.status ? 'text-success' : 'text-danger'">{{ type.status ? '启动' : '关闭' }}</span>
                           <td>

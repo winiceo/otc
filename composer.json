@@ -2,11 +2,9 @@
   "name": "genvotc",
   "description": "",
   "keywords": [
-
     "web",
     "php",
     "laravel",
-
     "app"
   ],
   "license": "Apache-2.0",
@@ -37,7 +35,7 @@
     "php": ">=7.0.0",
     "doctrine/dbal": "^2.5",
     "fideloper/proxy": "~3.3",
-    "genv/web": "^1.0",
+    "genv/web": "1.1.0",
     "guzzlehttp/guzzle": "^6.3",
     "intervention/image": "^2.3",
     "jpush/jpush": "^3.5",

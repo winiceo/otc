@@ -1,7 +1,6 @@
 <?php
 
 
-
 use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Routing\Registrar as RouteRegisterContract;
 
@@ -21,7 +20,6 @@ Route::group([
         'auth:web', 'admin',
     ],
 ], function (RouteRegisterContract $route) {
-
     // Admin Index.
     // @GET /admin
     $route->get('/', 'HomeController@index');
@@ -33,7 +31,6 @@ Route::group([
     // Role
     // @Route /roles
     $route->group(['prefix' => 'roles'], function (RouteRegisterContract $route) {
-
         // Get all role.
         // @GET /roles
         $route->get('/', 'RoleController@roles');
@@ -58,7 +55,6 @@ Route::group([
     // Abilities.
     // @Route /abilities
     $route->group(['prefix' => 'abilities'], function (RouteRegisterContract $route) {
-
         // Get all abilities.
         // @get /abilities
         $route->get('/', 'RoleController@abilities');
@@ -79,7 +75,6 @@ Route::group([
     // CDN
     // @Route /admin/cdn
     $route->group(['prefix' => 'cdn'], function (RouteRegisterContract $route) {
-
         // Get cdn selected
         $route->get('/seleced', 'CdnController@getCdnSelected');
 
@@ -103,7 +98,6 @@ Route::group([
     // 附件部分
     // @Route /admin/files
     $route->group(['prefix' => 'files'], function (RouteRegisterContract $route) {
-
         // 附件配置部分
         $route->get('/setting', 'FileController@getConfig');
         $route->patch('/setting', 'FileController@setConfig');
@@ -112,7 +106,6 @@ Route::group([
     /* 敏感词路由 */
     // @Route /admin/sensitives
     $route->group(['prefix' => 'sensitives'], function (RouteRegisterContract $route) {
-
         /*
          * 获取敏感词列表
          *
@@ -146,7 +139,6 @@ Route::group([
 Route::middleware('auth:web')
 ->middleware('admin')
 ->group(function () {
-
     // 钱包
     Route::prefix('wallet')->group(function () {
         // 充值选项

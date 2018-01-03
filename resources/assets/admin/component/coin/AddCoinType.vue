@@ -24,7 +24,7 @@
     </div>
     <div class="panel panel-default" v-show="!loadding">
       <div class="panel-heading">
-        金币类型添加
+        币种添加
         <router-link tag="a" class="btn btn-link pull-right btn-xs" to="/gold" role="button">
           返回
         </router-link>
@@ -38,16 +38,16 @@
                 <input type="text" class="form-control" v-model="type.name">
               </div>
               <div class="col-md-4">
-                <span class="help-block">类型名称</span>
+                <span class="help-block">名称如BTC,ETH</span>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-md-2">单位</label>
+              <label class="control-label col-md-2">中文名称</label>
               <div class="col-md-6">
-                <input type="text" class="form-control" v-model="type.unit">
+                <input type="text" class="form-control" v-model="type.label">
               </div>
               <div class="col-md-4">
-                <span class="help-block">类型单位</span>
+                <span class="help-block">比特币、以太币</span>
               </div>
             </div>
             <div class="form-group">
@@ -92,7 +92,7 @@ const AddCoinType = {
 
         type: {
           name: '',
-          unit: '',
+          label: '',
           status: 0,
         },
 

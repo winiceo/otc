@@ -16,8 +16,8 @@
           <!-- The settings nav. -->
           <ul class="nav navbar-nav">
             <!-- 广告 -->
-            <router-link to="/gold" tag="li" active-class="active" exact>
-              <a href="#">币类型</a>
+            <router-link to="/coin" tag="li" active-class="active" exact>
+              <a href="#">币种</a>
             </router-link>
 
           </ul>
