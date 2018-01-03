@@ -1,1 +1,1 @@
-console.log('This is genvotc Plus Frontend.');
+console.log('This is ThinkSNS Plus Frontend.');

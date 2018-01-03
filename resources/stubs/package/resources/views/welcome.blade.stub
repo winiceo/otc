@@ -74,12 +74,12 @@
         <img src="{{ asset('/plus.png') }}" align="{{ config('app.name') }}">
 
         <div class="title m-b-md">
-            The {name} Package For genvotc+
+            The {name} Package For ThinkSNS+
         </div>
 
         <div class="links">
-            <a href="https://github.com/genv/genvotc-plus/tree/master/docs">Documentation</a>
-            <a href="https://github.com/genv/genvotc-plus">GitHub</a>
+            <a href="https://github.com/slimkit/thinksns-plus/tree/master/docs">Documentation</a>
+            <a href="https://github.com/slimkit/thinksns-plus">GitHub</a>
         </div>
     </div>
 </div>

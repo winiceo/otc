@@ -2,11 +2,11 @@
 
 namespace {namespace}\Handlers;
 
-use Genv\Otc\Utils\Path;
+use Zhiyi\Plus\Utils\Path;
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Foundation\Application as ApplicationContract;
 
-class DevPackageHandler extends \Genv\Otc\Support\PackageHandler
+class DevPackageHandler extends \Zhiyi\Plus\Support\PackageHandler
 {
     /**
      * The application instance.

@@ -65,7 +65,7 @@ export default {
   },
   data: () => ({
     form: {
-      name: 'genvotc+',
+      name: 'ThinkSNS+',
       url: null,
       databaseType: null,
       host: '127.0.0.1',

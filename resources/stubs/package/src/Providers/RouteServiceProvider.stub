@@ -3,7 +3,7 @@
 namespace {namespace}\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Genv\Otc\Support\ManageRepository;
+use Zhiyi\Plus\Support\ManageRepository;
 
 class RouteServiceProvider extends ServiceProvider
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Model;
+namespace Genv\Otc\Models;
 
-use App\Helpers\HasAuthor;
-use App\Helpers\HasTimestamps;
-use App\Helpers\ModelHelpers;
-use App\Scopes\StatusScope;
+use Genv\Otc\Helpers\HasAuthor;
+use Genv\Otc\Helpers\HasTimestamps;
+use Genv\Otc\Helpers\ModelHelpers;
+use Genv\Otc\Scopes\StatusScope;
 
 use DB;
 

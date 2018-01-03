@@ -1,7 +1,11 @@
 {
     "/js/admin.js": "/js/admin.js",
     "/js/installer.js": "/js/installer.js",
+    "/web/js/app.js": "/web/js/app.js",
+    "/web/js/vendor.js": "/web/js/vendor.js",
     "/js/bootstrap.js": "/js/bootstrap.js",
     "/css/bootstrap.css": "/css/bootstrap.css",
+    "/web/css/app.css": "/web/css/app.css",
+    "/web/js/manifest.js": "/web/js/manifest.js",
     "/installer/logo.png": "/installer/logo.png"
 }

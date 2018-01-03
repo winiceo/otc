@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace Genv\Otc\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 

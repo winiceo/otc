@@ -27,8 +27,10 @@
 
     <div id="app"></div>
 
-    @parent
 
+    <script src="{{ mix('web/js/manifest.js', 'assets') }}"></script>
+    <script src="{{ mix('web/js/vendor.js', 'assets') }}"></script>
+    @parent
     <script src="{{ mix('js/admin.js', 'assets') }}"></script>
 
 @endsection

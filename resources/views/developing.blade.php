@@ -2,7 +2,7 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-        <title>genvotc+</title>
+        <title>ThinkSNS+</title>
         <style>
             html, body {
                 height: 100%;

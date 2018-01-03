@@ -3,7 +3,7 @@
     <header class="header">
       <div class="container">
         <img v-if="logo" :src="logo">
-        <h1 v-else>genvotc Plus</h1>
+        <h1 v-else>ThinkSNS Plus</h1>
         <span>当前版本：{{ version }}</span>
       </div>
     </header>

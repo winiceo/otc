@@ -2,7 +2,7 @@
 
 namespace {namespace}\Providers;
 
-use Genv\Otc\Support\PackageHandler;
+use Zhiyi\Plus\Support\PackageHandler;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -136,7 +136,7 @@ class AppServiceProvider extends ServiceProvider
      * Register handler.
      *
      * @param string $name
-     * @param \Genv\Otc\Support\PackageHandler|string $handler
+     * @param \Zhiyi\Plus\Support\PackageHandler|string $handler
      * @return void
      */
     private function loadHandleFrom(string $name, $handler)

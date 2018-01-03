@@ -56,3 +56,34 @@ mix.js('resources/assets/admin', path.join('public', 'assets', 'js'));
 
 mix.js('resources/assets/installer/main.js', path.join('public', 'assets', 'js', 'installer.js'));
 mix.copy('resources/assets/installer/logo.png', path.join('public', 'assets', 'installer', 'logo.png'));
+
+
+
+
+mix.webpackConfig({
+    output: {
+        publicPath: "/web",
+        chunkFilename: 'web/js/[name].[chunkhash].js'
+    },
+    resolve: {
+        alias: {
+            'components': 'assets/web/js/components',
+            'config': 'assets/web/js/config',
+            'lang': 'assets/web/js/lang',
+            'plugins': 'assets/web/js/plugins',
+            'vendor': 'assets/web/js/vendor',
+            'views': 'assets/web/js/views',
+            'dashboard': 'assets/web/js/views/dashboard',
+        },
+        modules: [
+            'node_modules',
+            path.resolve(__dirname, "resources")
+        ]
+    },
+})
+
+
+mix.js('resources/assets/web/js/app.js', 'web/js')
+    .extract(['vue'])
+
+    .sass('resources/assets/web/sass/app.scss', 'web/css');

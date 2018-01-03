@@ -4,7 +4,7 @@ namespace {namespace}\Handlers;
 
 use Illuminate\Console\Command;
 
-class PackageHandler extends \Genv\Otc\Support\PackageHandler
+class PackageHandler extends \Zhiyi\Plus\Support\PackageHandler
 {
     /**
      * Publish public asstes source handle.
