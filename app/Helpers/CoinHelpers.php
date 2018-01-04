@@ -2,7 +2,8 @@
 
 namespace Genv\Otc\Helpers;
 
-use App\Model\CoinType;
+
+use Genv\Otc\Models\CoinType;
 use Illuminate\Contracts\Pagination\Paginator;
 
 trait CoinHelpers

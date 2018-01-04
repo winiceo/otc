@@ -38,7 +38,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->username }}
+                            {{ Auth::user()->name }}
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -49,7 +49,7 @@
 
                             <div class="dropdown-divider"></div>
 
-                            <a href="{{ url('/logout') }}"
+                            <a href="{{ url('/auth/logout') }}"
                                 class="dropdown-item"
                                 onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

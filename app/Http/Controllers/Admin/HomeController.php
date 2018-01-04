@@ -20,6 +20,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+
+
         $user = $request->user();
         $data = [
             'csrf_token' => csrf_token(),
@@ -30,7 +32,7 @@ class HomeController extends Controller
             'token' => JWTAuth::fromUser($user),
         ];
 
-        return view('admin', $data);
+        return view('admin.dashboard', $data);
     }
 
     /**

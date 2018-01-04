@@ -433,7 +433,7 @@ class SiteController extends Controller
             'execute_time' => ini_get('max_execution_time').'秒',
             'server_date' => date('Y年n月j日 H:i:s'),
             'local_date' => gmdate('Y年n月j日 H:i:s', time() + 8 * 3600),
-            'domain_ip' => $_SERVER['SERVER_NAME'].' [ '.$_SERVER['SERVER_ADDR'].' ]',
+           // 'domain_ip' => $_SERVER['SERVER_NAME'].' [ '.$_SERVER['SERVER_ADDR'].' ]',
             'user_ip' => $_SERVER['REMOTE_ADDR'],
             'disk' => round((disk_free_space('.') / (1024 * 1024)), 2).'M',
         ];

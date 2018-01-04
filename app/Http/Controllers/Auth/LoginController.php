@@ -34,7 +34,7 @@ class LoginController extends Controller
      */
     public function showLoginForm(Repository $config)
     {
-        return view('auth.login', [
+        return view('admin.login', [
             'login' => $login = old('email', old('phone', old('name', old('id', '')))),
             'errorUsername' => username($login),
             'logo' => $config->get('site.background.logo', url('/plus.png')),

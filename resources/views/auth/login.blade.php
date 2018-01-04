@@ -1,131 +1,56 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+@section('content')
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <h1>@lang('auth.login')</h1>
 
-    <title>登录 - {{ config('app.name') }}</title>
+        {!! Form::open(['route' => 'login', 'role' => 'form', 'method' => 'POST']) !!}
+            <div class="form-group">
+                {!! Form::label('email', __('validation.attributes.email'), ['class' => 'control-label']) !!}
+                {!! Form::email('email', old('email'), ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'required', 'autofocus']) !!}
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        html, body {
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            margin: 0;
-            padding: 0;
-        }
-        .g-bg-color {
-            background: #59b6d7;
-            background: -moz-linear-gradient(135deg, #7262d1, #48d7e4);
-            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #7262d1), color-stop(100%, #48d7e4));
-            background: -webkit-linear-gradient(0deg, #7262d1, #48d7e4);
-            background: -o-linear-gradient(135deg, #7262d1, #48d7e4);
-            background: -ms-linear-gradient(135deg, #7262d1, #48d7e4);
-            background: linear-gradient(135deg, #7262d1, #48d7e4);
-        }
-        .root {
-            display: flex;
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .form-group {
-            margin-top: 15px;
-            width: 240px;
-        }
-        .form-buttom-group {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .form-control {
-            display: block;
-            width: 100%;
-            height: 36px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0);
-            background-image: none;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 4px;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-            outline: none;
-            box-sizing: border-box;
-        }
-        .has-error .form-control {
-            border-color: #a94442;
-        }
-        .has-error .help-block {
-            display: block;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            color: #a94442;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        .form-submit {
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 4px;
-            background: rgba(0, 0, 0, 0);
-            width: 100px;
-            height: 36px;
-            color: #fff;
-            outline: none;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-<div class="g-bg-color root">
-    <img src="{{ $logo }}" width="84px" />
-    <form role="form" method="POST" action="{{ route('login') }}">
-        {{ csrf_field() }}
+                @if ($errors->has('email'))
+                    <span class="invalid-feedback">{{ $errors->first('email') }}</span>
+                @endif
+            </div>
 
-        <input type="hidden" name="redirect" value="{{ request()->input('redirect') }}">
+            <div class="form-group">
+                {!! Form::label('password', __('validation.attributes.password'), ['class' => 'control-label']) !!}
+                {!! Form::password('password', ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'required']) !!}
 
-        <div class="form-group {{ $errors->has($errorUsername) ? 'has-error' : '' }} ">
+                @if ($errors->has('password'))
+                    <span class="invalid-feedback">{{ $errors->first('password') }}</span>
+                @endif
+            </div>
 
-            <input class="form-control" type="text" name="login" placeholder="登录名 / 邮箱 / 手机号码" value="{{ $login }}" required autofocus />
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        {!! Form::checkbox('remember', null, old('remember')) !!} @lang('auth.remember_me')
+                    </label>
+                </div>
+            </div>
 
-            @if ($errors->has($errorUsername))
-                <span class="help-block">
-                    {{ $errors->first($errorUsername) }}
-                </span>
-            @endif
+            <div class="form-group">
+                {!! Form::submit(__('auth.login'), ['class' => 'btn btn-primary']) !!}
+                {{ link_to('/password/reset', __('auth.forgotten_password'), ['class' => 'btn btn-link'])}}
+            </div>
+        {!! Form::close() !!}
 
+        <hr>
+
+        <div class="d-flex justify-content-between flex-wrap">
+            <a href="{{ route('auth.provider', ['provider' => 'github']) }}" class="btn btn-secondary mb-2">
+                @lang('auth.services.github')
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+
+            <a href="{{ route('auth.provider', ['provider' => 'twitter']) }}" class="btn btn-secondary mb-2">
+                @lang('auth.services.twitter')
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
         </div>
-
-        <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }} ">
-            <input class="form-control" type="password" name="password" placeholder="请输入密码" required />
-
-            @if ($errors->has('password'))
-                <span class="help-block">
-                    {{ $errors->first('password') }}
-                </span>
-            @endif
-
-        </div>
-
-        <div class="form-group form-buttom-group">
-            <label>
-                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} /> 记住我
-            </label>
-            <button class="form-submit" type="submit">登录</button>
-        </div>
-
-    </form>
+    </div>
 </div>
-</body>
-</html>
+@endsection

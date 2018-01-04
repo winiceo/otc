@@ -1,33 +1,6 @@
 <?php
 
-/*
- * +----------------------------------------------------------------------+
- * |                          ThinkSNS Plus                               |
- * +----------------------------------------------------------------------+
- * | Copyright (c) 2017 Chengdu ZhiYiChuangXiang Technology Co., Ltd.     |
- * +----------------------------------------------------------------------+
- * | This source file is subject to version 2.0 of the Apache license,    |
- * | that is bundled with this package in the file LICENSE, and is        |
- * | available through the world-wide-web at the following url:           |
- * | http://www.apache.org/licenses/LICENSE-2.0.html                      |
- * +----------------------------------------------------------------------+
- * | Author: Slim Kit Group <master@zhiyicx.com>                          |
- * | Homepage: www.thinksns.com                                           |
- * +----------------------------------------------------------------------+
- */
-
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
 
     'accepted'             => ':attribute必须接受',
     'active_url'           => ':attribute必须是一个合法的 URL',
@@ -143,5 +116,6 @@ return [
     ],
 
     'message' => '提交的信息验证错误',
+
 
 ];

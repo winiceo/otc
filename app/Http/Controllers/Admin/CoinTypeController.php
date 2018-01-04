@@ -43,15 +43,13 @@ class CoinTypeController extends Controller
 
     public function openType(CoinType $type)
     {
-        if (CoinType::count() > 1) {
-            CoinType::where('id', '!=', $type->id)
-                ->update(['status' => 0]);
+
 
             $type->status = !$type->status;
             $type->save();
 
             return response()->json(['message' => [sprintf('启动"%s"分类成功', $type->name)]], 201);
-        }
+
     }
 
     public function deleteType(CoinType $type)

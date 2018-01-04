@@ -59,7 +59,7 @@
               <input type="text" class="form-control" id="site-icp" aria-describedby="site-icp-help-block" placeholder="网站描述" v-model="icp">
             </div>
             <span class="col-sm-4 help-block" id="site-icp-help-block">
-              填写 ICP 备案的信息，例如: 浙ICP备xxxxxxxx号
+
             </span>
           </div>
           <!-- End ICP 备案信息 -->

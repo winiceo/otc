@@ -25,7 +25,7 @@
         // window.app=@json($app);
     </script>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/web/css/app.css') }}" rel="stylesheet">
 
  </head>
 <body class="bg-light">
@@ -50,9 +50,9 @@
         <script src="//{{ Request::getHost() }}:8888/socket.io/socket.io.js"></script>
     @endif
 
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('assets/web/js/manifest.js') }}"></script>
+    <script src="{{ asset('assets/web/js/vendor.js') }}"></script>
+    <script src="{{ asset('assets/web/js/app.js') }}"></script>
 
     @stack('inline-scripts')
 </body>

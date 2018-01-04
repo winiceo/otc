@@ -3,8 +3,8 @@
 namespace Genv\Otc\Queries;
 
 
-use App\Model\Advert;
-use App\Model\Order;
+use Genv\Otc\Models\Advert;
+use Genv\Otc\Models\Order;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

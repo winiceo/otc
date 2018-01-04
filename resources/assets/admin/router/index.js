@@ -13,7 +13,7 @@ import certificationRouter from './certification';
 import coversationRouter from './conversation';
 import captchaRouter from './captcha';
 import goldRouter from './coin';
-import rewardRouter from './reward';
+import withdrawRouter from './withdraw';
 import cdnRoutes from './cdn';
 import reportRoutes from './report';
 
@@ -43,7 +43,7 @@ const childrenRoutes = [
   coversationRouter,
   captchaRouter,
   goldRouter,
-  rewardRouter,
+    withdrawRouter,
   cdnRoutes,
   reportRoutes
 ];

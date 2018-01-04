@@ -2,7 +2,7 @@
 
 namespace Genv\Otc\Helpers;
 
-use App\Model\User;
+use Genv\Otc\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 trait HasAuthor

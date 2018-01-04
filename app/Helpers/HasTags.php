@@ -2,13 +2,13 @@
 
 namespace Genv\Otc\Helpers;
 
-use App\Models\Tag;
+use Genv\Otc\Modelss\Tag;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait HasTags
 {
     /**
-     * @return \App\Models\Tag[]
+     * @return \Genv\Otc\Modelss\Tag[]
      */
     public function tags()
     {
@@ -16,7 +16,7 @@ trait HasTags
     }
 
     /**
-     * @param \App\Models\Tag[]|int[] $tags
+     * @param \Genv\Otc\Modelss\Tag[]|int[] $tags
      */
     public function syncTags(array $tags)
     {

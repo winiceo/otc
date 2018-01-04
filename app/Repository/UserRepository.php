@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
 use Auth;
-use  App\Model\User;
+use  Genv\Otc\Models\User;
 use Genv\Otc\Scopes\StatusScope;
 
 class UserRepository
@@ -104,7 +104,7 @@ class UserRepository
     /**
      * Change the user password.
      * 
-     * @param   App\Model\User $user
+     * @param   Genv\Otc\Models\User $user
      * @param  string $password
      * @return boolean
      */

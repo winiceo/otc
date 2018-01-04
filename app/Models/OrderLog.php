@@ -1,7 +1,7 @@
 <?php
 
 namespace Genv\Otc\Models;
-use  App\Model\User;
+use  Genv\Otc\Models\User;
 
 
 class OrderLog extends Model

@@ -3,7 +3,7 @@
 namespace Genv\Otc\Models;
 
 
-use  App\Model\User;
+use  Genv\Otc\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

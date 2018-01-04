@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
 use App\Comment;
 use App\Tools\Mention;
@@ -95,7 +95,7 @@ class CommentRepository
     /**
      * Up vote or down vote item.
      * 
-     * @param  \ App\Model\User $user
+     * @param  \ Genv\Otc\Models\User $user
      * @param  \Illuminate\Database\Eloquent\Model $target
      * @param  string $type
      * 

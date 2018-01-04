@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
- use App\Model\Address;
+ use Genv\Otc\Models\Address;
  use App\Tools\Mention;
 use App\Notifications\GotVote;
 use App\Notifications\MentionedUser;
@@ -82,7 +82,7 @@ class AddressRepository
     /**
      * Up vote or down vote item.
      * 
-     * @param  \ App\Model\User $user
+     * @param  \ Genv\Otc\Models\User $user
      * @param  \Illuminate\Database\Eloquent\Model $target
      * @param  string $type
      * 

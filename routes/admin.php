@@ -4,16 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Contracts\Routing\Registrar as RouteRegisterContract;
 
-/*
-|--------------------------------------------------------------------------
-| Admin Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::group([
     'middleware' => [
@@ -315,13 +306,13 @@ Route::middleware('auth:web')
     Route::patch('coin/types/{type}/open', 'CoinTypeController@openType');
     Route::delete('coin/types/{type}', 'CoinTypeController@deleteType');
 
-    /* ------------- 打赏管理 -----------------*/
+    /* ------------- 提现管理 -----------------*/
     // 清单
-    Route::get('rewards', 'RewardController@rewards');
+    Route::get('withdraws', 'WithdrawController@withdraw');
     // 统计
-    Route::get('rewards/statistics', 'RewardController@statistics');
+    Route::get('withdraws/statistics', 'WithdrawController@statistics');
 
-    Route::get('rewards/export', 'RewardController@export');
+    Route::get('withdraws/export', 'WithdrawController@export');
 
     /* ------------- 举报管理 -----------------*/
     Route::get('reports', 'ReportController@index');

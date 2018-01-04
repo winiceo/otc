@@ -2,13 +2,13 @@
 
 namespace Genv\Otc\Queries;
 
-use App\Models\Thread;
+use Genv\Otc\Modelss\Thread;
 use Illuminate\Contracts\Pagination\Paginator;
 
 class SearchThreads
 {
     /**
-     * @return \App\Models\Thread[]
+     * @return \Genv\Otc\Modelss\Thread[]
      */
     public static function get(string $keyword, int $perPage = 20): Paginator
     {

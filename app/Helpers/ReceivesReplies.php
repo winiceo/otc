@@ -2,13 +2,13 @@
 
 namespace Genv\Otc\Helpers;
 
-use App\Models\Reply;
+use Genv\Otc\Modelss\Reply;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait ReceivesReplies
 {
     /**
-     * @return \App\Models\Reply[]
+     * @return \Genv\Otc\Modelss\Reply[]
      */
     public function replies()
     {
@@ -16,7 +16,7 @@ trait ReceivesReplies
     }
 
     /**
-     * @return \App\Models\Reply[]
+     * @return \Genv\Otc\Modelss\Reply[]
      */
     public function latestReplies(int $amount = 5)
     {

@@ -63,6 +63,10 @@
       <span class="glyphicon glyphicon-user __icon"></span>
       用户中心
     </router-link>
+    <router-link class="list-group-item __button" to="/withdraw" active-class="active" >
+      <span class="__icon">DS</span>
+      提现管理
+    </router-link>
     <router-link class="list-group-item __button" to="/reports" active-class="active" >
       <span class="glyphicon glyphicon-user __icon"></span>
       举报管理
@@ -91,10 +95,7 @@
       <span class="__icon">CO</span>
       会话管理
     </router-link>
-    <router-link class="list-group-item __button" to="/reward" active-class="active" >
-      <span class="__icon">DS</span>
-      打赏管理
-    </router-link>
+
 
     <!-- CDN -->
     <router-link class="list-group-item __button" to="/cdn" active-class="active">

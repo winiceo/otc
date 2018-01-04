@@ -1,36 +1,28 @@
 <?php
 
-/*
- * +----------------------------------------------------------------------+
- * |                          ThinkSNS Plus                               |
- * +----------------------------------------------------------------------+
- * | Copyright (c) 2017 Chengdu ZhiYiChuangXiang Technology Co., Ltd.     |
- * +----------------------------------------------------------------------+
- * | This source file is subject to version 2.0 of the Apache license,    |
- * | that is bundled with this package in the file LICENSE, and is        |
- * | available through the world-wide-web at the following url:           |
- * | http://www.apache.org/licenses/LICENSE-2.0.html                      |
- * +----------------------------------------------------------------------+
- * | Author: Slim Kit Group <master@zhiyicx.com>                          |
- * | Homepage: www.thinksns.com                                           |
- * +----------------------------------------------------------------------+
- */
-
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
 
     '403'      => '没有权限',
     'failed'   => '输入的账户信息错误',
     'throttle' => '尝试登陆次数过多，请在:seconds秒后重试',
+
+
+    'failed' => 'These credentials do not match our records.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'login'    => 'Login',
+    'logout'    => 'Logout',
+    'register' => "Register",
+    'remember_me' => 'Remember me',
+    'forgotten_password' => 'Forgot password ?',
+    'reset_password' => 'Reset password',
+    'send_password_reset_link' => 'Send password reset link',
+    'logged_in' => 'You are now logged in',
+    'logged_in_provider' => 'You are now logged in with :Provider.',
+    'not_authorized' => "Not authorized.",
+
+    'services' => [
+        'github' => 'Login with Github',
+        'twitter' => 'Login with Twitter',
+    ],
 
 ];

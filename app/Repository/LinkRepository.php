@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
 use App\Link;
 use Genv\Otc\Scopes\StatusScope;

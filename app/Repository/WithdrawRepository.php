@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
- use App\Model\Address;
- use App\Model\Withdraw;
+ use Genv\Otc\Models\Address;
+ use Genv\Otc\Models\Withdraw;
  use App\Tools\Mention;
 use App\Notifications\GotVote;
 use App\Notifications\MentionedUser;

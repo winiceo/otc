@@ -36,7 +36,7 @@
                                 </div>
                             </td>
                             <td>
-                                <img style="height:35px;vertical-align: middle;margin-right:10px;width:35px;border-radius: 50%;" src="{{$order->advertiser->avatar}}">{{$order->advertiser->name}}							</td>
+                                {{--<img style="height:35px;vertical-align: middle;margin-right:10px;width:35px;border-radius: 50%;" src="{{$order->advertiser->avatar}}">{{$order->advertiser->name}}							</td>--}}
                             <td>
                                 <a href="/order/info/{{$order->id}}" style="color:#108ee9;">
                                     {{$order->order_code}}									</a>

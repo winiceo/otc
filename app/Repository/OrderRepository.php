@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories;
+namespace Genv\Otc\Repository;
 
-use App\Model\Order;
-use Genv\Otc\Scopes\StatusScope;
-use  App\Model\User;
+
+
+use Genv\Otc\Models\Order;
 
 class OrderRepository
 {

@@ -38,10 +38,9 @@
                           <td>
                              <span :class="type.status ? 'text-success' : 'text-danger'">{{ type.status ? '启动' : '关闭' }}</span>
                           <td>
-                          <template v-if="type.status !== 1">
+
                             <button class="btn btn-primary btn-sm" @click.prevent="changeStatus(type.id)">{{ !type.status ? '启动' : '关闭' }}</button>
-                            <button class="btn btn-danger btn-sm" @click.prevent="delType(type.id)">删除</button>
-                          </template>
+
                           </td>
                         </tr>
                       </template>

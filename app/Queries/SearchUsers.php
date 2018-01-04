@@ -2,13 +2,13 @@
 
 namespace Genv\Otc\Queries;
 
-use  App\Model\User;
+use  Genv\Otc\Models\User;
 use Illuminate\Contracts\Pagination\Paginator;
 
 class SearchUsers
 {
     /**
-     * @return \ App\Model\User[]
+     * @return \ Genv\Otc\Models\User[]
      */
     public static function get(string $keyword, int $perPage = 20): Paginator
     {
