@@ -41,7 +41,6 @@ class Order
      *
      * @param mixed $order
      * @param array $args see static::createOrder method
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct($order = null)
     {
@@ -54,7 +53,6 @@ class Order
      * Set order model.
      *
      * @param \Genv\Otc\Models\WalletOrder $order
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setOrderModel(WalletOrderModel $order)
     {
@@ -67,7 +65,6 @@ class Order
      * Get order model.
      *
      * @return \Genv\Otc\Models\WalletOrder
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getOrderModel(): WalletOrderModel
     {
@@ -78,7 +75,6 @@ class Order
      * Has order success.
      *
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function hasSuccess(): bool
     {
@@ -89,7 +85,6 @@ class Order
      * Has order fail.
      *
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function hasFail(): bool
     {
@@ -100,7 +95,6 @@ class Order
      * Has order wait.
      *
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function hasWait(): bool
     {
@@ -111,7 +105,6 @@ class Order
      * Save order save method.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function save()
     {
@@ -122,7 +115,6 @@ class Order
      * Save and set order [state=1].
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function saveStateSuccess()
     {
@@ -135,7 +127,6 @@ class Order
      * Save and set order [state=-1].
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function saveStateFial()
     {
@@ -148,7 +139,6 @@ class Order
      * Auth complete.
      *
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function autoComplete(...$arguments): bool
     {
@@ -166,7 +156,6 @@ class Order
      * Get TargetTypeManager instance.
      *
      * @return \Genv\Otc\Packages\Wallet\TargetTypeManager
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getTargetTypeManager(): TargetTypeManager
     {

@@ -16,7 +16,6 @@ class WalletRuleController extends Controller
      *
      * @param ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(ResponseFactory $response)
     {
@@ -35,7 +34,6 @@ class WalletRuleController extends Controller
      * @param Request $request
      * @param ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(Request $request, ResponseFactory $response)
     {

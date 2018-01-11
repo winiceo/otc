@@ -30,7 +30,6 @@ class WalletRechargeController extends Controller
      * Create controller instance.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(ApplicationContract $app, WalletChargeService $chargeService)
     {
@@ -43,7 +42,6 @@ class WalletRechargeController extends Controller
      *
      * @param \Genv\Otc\Http\Requests\API2\StoreWalletRecharge $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(StoreWalletRecharge $request)
     {
@@ -75,7 +73,6 @@ class WalletRechargeController extends Controller
      *
      * @param string $type
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveStore(string $type)
     {
@@ -88,7 +85,6 @@ class WalletRechargeController extends Controller
      * @param \Genv\Otc\Models\WalletCharge $charge
      * @param array $extra
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createCharge(WalletChargeModel $charge, array $extra = [])
     {
@@ -101,7 +97,6 @@ class WalletRechargeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param string $channel
      * @return \Genv\Otc\Models\WalletCharge
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createChargeModel(Request $request, string $channel): WalletChargeModel
     {

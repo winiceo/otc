@@ -41,7 +41,6 @@ class NewWallet extends Model
      * The wallet owner.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function owner(): HasOne
     {

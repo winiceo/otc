@@ -18,7 +18,6 @@ class WalletChargeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function list(Request $request, ContractResponse $response)
     {
@@ -54,7 +53,6 @@ class WalletChargeController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\WalletCharge $charge
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ContractResponse $response, WalletCharge $charge)
     {
@@ -77,7 +75,6 @@ class WalletChargeController extends Controller
      *
      * @param \Genv\Otc\Models\WalletCharge $charge
      * @return \Genv\Otc\Models\WalletCharge
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function retrieveCharge(WalletCharge &$charge, User $user): WalletCharge
     {
@@ -116,7 +113,6 @@ class WalletChargeController extends Controller
      * @param array $charge
      * @param string|null $default
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveChargeAccount($charge, $default = null)
     {

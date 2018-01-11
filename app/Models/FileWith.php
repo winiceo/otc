@@ -17,7 +17,6 @@ class FileWith extends Model
      * has file.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function file()
     {
@@ -28,7 +27,6 @@ class FileWith extends Model
      * 获取付费节点.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function paidNode()
     {

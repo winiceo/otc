@@ -16,7 +16,6 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function roles(Request $request)
     {
@@ -38,7 +37,6 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function delete(Request $request, Role $role)
     {
@@ -67,7 +65,6 @@ class RoleController extends Controller
      *
      * @param Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function createRole(Request $request)
     {
@@ -111,7 +108,6 @@ class RoleController extends Controller
      * @param Request $request
      * @param Role $role
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function showRole(Request $request, Role $role)
     {
@@ -145,7 +141,6 @@ class RoleController extends Controller
      * @param Request $request
      * @param Role $role
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updateRole(Request $request, Role $role)
     {
@@ -168,7 +163,6 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function abilities(Request $request)
     {
@@ -188,7 +182,6 @@ class RoleController extends Controller
      *
      * @param Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function createAbility(Request $request)
     {
@@ -234,7 +227,6 @@ class RoleController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updateAbility(Request $request, Ability $ability)
     {
@@ -271,7 +263,6 @@ class RoleController extends Controller
      *
      * @param Ability $ability
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function deleteAbility(Request $request, Ability $ability)
     {

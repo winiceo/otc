@@ -15,7 +15,6 @@ class TagController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\TagCategory $categoryModel
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(ResponseFactoryContract $response, TagCategoryModel $categoryModel)
     {

@@ -29,7 +29,6 @@ class UserAbility
      * @param \Closure $next
      * @param string $ability
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle(Request $request, Closure $next, string $ability, string $message = '')
     {

@@ -27,7 +27,6 @@ class Application extends LaravelApplication
      * Create a new Illuminate application instance.
      *
      * @param string|null $basePath
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct($basePath = null)
     {
@@ -44,7 +43,6 @@ class Application extends LaravelApplication
      * Get the version number of the Laravel framework.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getLaravelVersion()
     {
@@ -56,7 +54,6 @@ class Application extends LaravelApplication
      *
      * @param string $file
      * @return $this
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function loadVendorYamlFrom(string $file): ApplicationContract
     {
@@ -69,7 +66,6 @@ class Application extends LaravelApplication
      * Get the environment yaml file the application using.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function vendorYamlFile(): string
     {
@@ -80,7 +76,6 @@ class Application extends LaravelApplication
      * Get the fully qualified path to the environment yaml file.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function vendorYamlFilePath(): string
     {
@@ -91,7 +86,6 @@ class Application extends LaravelApplication
      * Register the core class aliases in the container.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function registerCoreContainerAliases()
     {

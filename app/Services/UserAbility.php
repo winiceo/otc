@@ -17,7 +17,6 @@ class UserAbility implements UserAbilityContract
      *
      * @param string $role
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function roles(string $role = '')
     {
@@ -38,7 +37,6 @@ class UserAbility implements UserAbilityContract
      *
      * @param string $ability
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function all(string $ability = '')
     {
@@ -61,7 +59,6 @@ class UserAbility implements UserAbilityContract
      * Get user instance.
      *
      * @return \Genv\Otc\Models\User
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user(): UserModel
     {
@@ -72,7 +69,6 @@ class UserAbility implements UserAbilityContract
      * Set user model.
      *
      * @param \Genv\Otc\Models\User $user
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setUser(UserModel $user)
     {

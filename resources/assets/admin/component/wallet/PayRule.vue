@@ -80,7 +80,6 @@ export default {
      * 加载规则.
      *
      * @return {vodi}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     loadRule() {
       this.load.status = 0;
@@ -102,7 +101,6 @@ export default {
      * 发送更新规则.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     updateRule() {
       const rule = this.rule;
@@ -126,7 +124,6 @@ export default {
      * @param {string} type
      * @param {string} message
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendAlert(type, message) {
       window.clearInterval(this.alert.interval);

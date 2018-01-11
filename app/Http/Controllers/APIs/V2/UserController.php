@@ -22,7 +22,6 @@ class UserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $model
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(Request $request, ResponseFactoryContract $response, User $model)
     {
@@ -59,7 +58,6 @@ class UserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Models\User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, User $user)
     {
@@ -75,7 +73,6 @@ class UserController extends Controller
      * 创建用户.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(StoreUserPost $request, ResponseFactoryContract $response, JWTAuth $auth)
     {
@@ -132,7 +129,6 @@ class UserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Models\User &$user
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function hasFollowing(Request $request, User &$user)
     {
@@ -147,7 +143,6 @@ class UserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Models\User &$user
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function hasFollower(Request $request, User &$user)
     {

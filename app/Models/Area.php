@@ -17,7 +17,6 @@ class Area extends Model
      *
      * @return Illuminate\Database\Eloquent\Builder
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByPid(Builder $query, int $pid): Builder
@@ -30,7 +29,6 @@ class Area extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function parent()
@@ -43,7 +41,6 @@ class Area extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function items()

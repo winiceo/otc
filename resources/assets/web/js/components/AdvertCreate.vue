@@ -147,12 +147,12 @@
                 this.form.price= sum.toFixed(2);
             },
             onSubmit() {
-               this.$http.post('/ad', this.form)
+               this.$http.post('/advert/store', this.form)
                     .then((response) => {
 
                    
-                       if(response.data.code==200){
-                       window.location.href='/trade'
+                       if(response.data.status==200){
+                        window.location.href='/trade'
                        }
                         console.log(response)
 

@@ -15,7 +15,6 @@ class Wallet extends Model
      * Get the user of the wallet.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user(): BelongsTo
     {

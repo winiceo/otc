@@ -67,7 +67,6 @@ class User extends Authenticatable implements JWTSubject
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getJWTIdentifier()
     {
@@ -78,7 +77,6 @@ class User extends Authenticatable implements JWTSubject
      * Return a key value array, containing any custom claims to be added to the JWT.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getJWTCustomClaims()
     {
@@ -89,7 +87,6 @@ class User extends Authenticatable implements JWTSubject
      * Get avatar key.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarKey()
     {
@@ -100,7 +97,6 @@ class User extends Authenticatable implements JWTSubject
      * Get avatar attribute.
      *
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarAttribute()
     {
@@ -115,7 +111,6 @@ class User extends Authenticatable implements JWTSubject
      * Get user background image.
      *
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getBgAttribute()
     {
@@ -126,7 +121,6 @@ class User extends Authenticatable implements JWTSubject
      * Get verifed.
      *
      * @return array|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getVerifiedAttribute()
     {
@@ -149,7 +143,6 @@ class User extends Authenticatable implements JWTSubject
      * Has user extra.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function extra()
     {
@@ -160,7 +153,6 @@ class User extends Authenticatable implements JWTSubject
      * Has user certification.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function certification()
     {
@@ -171,7 +163,6 @@ class User extends Authenticatable implements JWTSubject
      * Has tags of the user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function tags()
     {
@@ -205,7 +196,6 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return Illuminate\Database\Eloquent\Builder 查询对象
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByPhone(Builder $query, string $phone): Builder
@@ -221,7 +211,6 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return Illuminate\Database\Eloquent\Builder 查询对象
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByName(Builder $query, string $name): Builder
@@ -235,7 +224,6 @@ class User extends Authenticatable implements JWTSubject
      * @param Illuminate\Database\Eloquent\Builder $query
      * @param string $email [description]
      * @return Illuminate\Database\Eloquent\Builder
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function scopeByEmail(Builder $query, string $email): Builder
     {
@@ -249,7 +237,6 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return self
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function createPassword(string $password): self
@@ -279,7 +266,6 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return [type] [description]
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function datas()
@@ -299,7 +285,6 @@ class User extends Authenticatable implements JWTSubject
      *
      * @return [type] [description]
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function syncData(array $attributes)
@@ -342,5 +327,9 @@ class User extends Authenticatable implements JWTSubject
     public function getImPwdHash()
     {
         return md5($this->password);
+    }
+
+    public function emailAddress(){
+        return $this->email;
     }
 }

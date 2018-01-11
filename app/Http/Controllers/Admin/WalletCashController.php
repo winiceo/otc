@@ -18,7 +18,6 @@ class WalletCashController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, WalletRatio $repository)
     {
@@ -64,7 +63,6 @@ class WalletCashController extends Controller
      * @param Request $request
      * @param WalletCash $cash
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function passed(Request $request, WalletCash $cash)
     {
@@ -112,7 +110,6 @@ class WalletCashController extends Controller
      * @param Request $request
      * @param WalletCash $cash
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refuse(Request $request, WalletCash $cash)
     {

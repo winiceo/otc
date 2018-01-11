@@ -17,7 +17,6 @@ class UserCommentController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\Comment $model
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(Request $request, ResponseContract $response, CommentModel $model)
     {

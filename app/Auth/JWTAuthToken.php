@@ -33,7 +33,6 @@ class JWTAuthToken
      *
      * @param UserModel $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function create(UserModel $user)
     {
@@ -47,7 +46,6 @@ class JWTAuthToken
      *
      * @param string $token
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refresh(string $token)
     {
@@ -63,7 +61,6 @@ class JWTAuthToken
      *
      * @param string $token
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function token(string $token, UserModel $user): string
     {

@@ -24,13 +24,13 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         // 注册验证规则.
         $this->registerValidator();
+
     }
 
     /**
      * Resgister the application service.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function register()
     {
@@ -47,13 +47,33 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->registerMorpMap();
-    }
 
+        $this->addAcceptableJsonType();
+
+    }
+    /**
+     * Add "application/json" to the "Accept" header for the current request.
+     */
+    protected function addAcceptableJsonType()
+    {
+        $this->app->rebinding('request', function ($app, $request) {
+            if ($request->is('api/*')) {
+                $accept = $request->header('Accept');
+
+                if (! str_contains($accept, ['/json', '+json'])) {
+                    $accept = rtrim('application/json,'.$accept, ',');
+
+                    $request->headers->set('Accept', $accept);
+                    $request->server->set('HTTP_ACCEPT', $accept);
+                    $_SERVER['HTTP_ACCEPT'] = $accept;
+                }
+            }
+        });
+    }
     /**
      * 注册验证规则.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function registerValidator()
     {
@@ -81,7 +101,6 @@ class AppServiceProvider extends ServiceProvider
      * @param strint|int $value
      * @param array $parameters
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function validateDisplayLength(string $value, array $parameters): bool
     {
@@ -104,7 +123,6 @@ class AppServiceProvider extends ServiceProvider
      * Register model morp map.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function registerMorpMap()
     {
@@ -120,7 +138,6 @@ class AppServiceProvider extends ServiceProvider
      * @param array|null $map
      * @param bool|bool $merge
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function setMorphMap(array $map = null, bool $merge = true)
     {

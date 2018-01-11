@@ -19,7 +19,6 @@ class SmsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseFactory $response, VerificationCode $model)
     {
@@ -96,7 +95,6 @@ class SmsController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param string $driver
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function showOption(Repository $config, ResponseFactory $response, string $driver)
     {
@@ -118,7 +116,6 @@ class SmsController extends Controller
      * @param ResponseFactory $response
      * @param string $driver
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updateAlidayuOption(Configuration $store, Request $request, ResponseFactory $response)
     {
@@ -143,7 +140,6 @@ class SmsController extends Controller
      * @param ResponseFactory $response
      * @param string $driver
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updateAliyunOption(Configuration $store, Request $request)
     {
@@ -168,7 +164,6 @@ class SmsController extends Controller
      * @param ResponseFactory $response
      * @param string $driver
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updateYunpianOption(Configuration $store, Request $request)
     {

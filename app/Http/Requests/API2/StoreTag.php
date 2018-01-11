@@ -39,7 +39,6 @@ class StoreTag extends FormRequest
      * Get the validation message that apply to the request.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function messages(): array
     {

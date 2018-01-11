@@ -19,7 +19,6 @@ class WalletCashMinAmount
     /**
      * Create the cash type respositorie.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(CacheRepository $cache)
     {
@@ -30,7 +29,6 @@ class WalletCashMinAmount
      * Get wallet min amount.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(): int
     {
@@ -53,7 +51,6 @@ class WalletCashMinAmount
      *
      * @param int $amount
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(int $amount)
     {
@@ -70,7 +67,6 @@ class WalletCashMinAmount
      * Get the config cache key.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function cacheKey(): string
     {
@@ -81,7 +77,6 @@ class WalletCashMinAmount
      * Flush all cache.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {

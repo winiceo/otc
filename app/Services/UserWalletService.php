@@ -15,7 +15,6 @@ use Genv\Otc\Models\UserWallet;
 use Genv\Otc\Models\WalletAddress;
 use Genv\Otc\Models\Withdraw;
 use Illuminate\Contracts\Pagination\Paginator;
-use Slim\Http\Request;
 
 
 class UserWalletService
@@ -97,16 +96,16 @@ class UserWalletService
     }
 
 
-    public static function getHistory(Request $request, User $user, int $perPage = 20): Paginator
+    public static function getHistory( $request, User $user, int $perPage = 20): Paginator
     {
 
-        $order_by = $request->getParam('order_by', "id");
-        $desc = $request->getParam('desc', 1);
+        $order_by = $request->input('order_by', "id");
+        $desc = $request->input('desc', 1);
 
         return Withdraw::where(function ($query) use ($request, $user) {
 
             $query->where('user_id', $user->id);
-            $status = $request->getParam('status', -1);
+            $status = $request->input('status', -1);
             if ($status !== -1) {
                 $query->where('status', $status);
             }

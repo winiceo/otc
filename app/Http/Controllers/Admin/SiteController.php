@@ -32,7 +32,6 @@ class SiteController extends Controller
      * Construct handle.
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(Application $app, CommonConfig $config)
     {
@@ -45,7 +44,6 @@ class SiteController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function get(Request $request, Repository $config, ResponseFactory $response)
@@ -76,7 +74,6 @@ class SiteController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function updateSiteInfo(Request $request, Configuration $config, ResponseFactory $response)
@@ -106,7 +103,6 @@ class SiteController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function areas(Request $request)
@@ -132,7 +128,6 @@ class SiteController extends Controller
      *
      * @return mixed [description]
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function doAddArea(Request $request)
@@ -179,7 +174,6 @@ class SiteController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function deleteArea(Request $request, int $id)
@@ -211,7 +205,6 @@ class SiteController extends Controller
      *
      * @return mixed
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function patchArea(Request $request, Area $area)

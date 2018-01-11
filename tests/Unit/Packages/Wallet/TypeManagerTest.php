@@ -16,7 +16,6 @@ class TypeManagerTest extends TestCase
     /**
      * Setup the test environment.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function setUp()
     {
@@ -29,7 +28,6 @@ class TypeManagerTest extends TestCase
      * Test get default driver return.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testGetDefaultDriver()
     {
@@ -41,7 +39,6 @@ class TypeManagerTest extends TestCase
      * Test Create user driver.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testCreateUserDriver()
     {

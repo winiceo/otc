@@ -54,7 +54,6 @@ class PingPlusPlusChargeWebHooks
      * @param array $charge
      * @param string|null $default
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveChargeAccount($charge, $default = null)
     {

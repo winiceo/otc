@@ -45,7 +45,6 @@ class PackageHandler extends \Genv\Otc\Support\PackageHandler
      *
      * @param \Illuminate\Console\Command $command
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function publishHandle(Command $command)
     {
@@ -70,7 +69,6 @@ class PackageHandler extends \Genv\Otc\Support\PackageHandler
      *
      * @param \Illuminate\Console\Command $command
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function dbSeedHandle(Command $command)
     {

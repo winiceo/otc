@@ -16,7 +16,6 @@ class TargetTypeManagerTest extends TestCase
      * Test TargetTypeManager.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testBaseClass()
     {

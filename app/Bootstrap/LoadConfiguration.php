@@ -15,7 +15,6 @@ class LoadConfiguration
     /**
      * Create the bootstrap instance.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(Application $app, Configuration $configuration)
     {
@@ -27,7 +26,6 @@ class LoadConfiguration
      *  Run handler.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle()
     {

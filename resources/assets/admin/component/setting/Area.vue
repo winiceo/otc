@@ -179,7 +179,6 @@ const AreaComponent = {
      * 计算路径导航对象.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     tree () {
@@ -194,7 +193,6 @@ const AreaComponent = {
      * 获取当前选中子列表
      *
      * @return {Object} [description]
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     list () {
@@ -220,7 +218,6 @@ const AreaComponent = {
      *
      * @param {Number} pid
      * @return {Array}
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     getTrees (pid) {
@@ -240,7 +237,6 @@ const AreaComponent = {
      * 设置选中id.
      *
      * @param {Number} id
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     selectCurrent (id) {
@@ -261,7 +257,6 @@ const AreaComponent = {
     /**
      * 添加新地区.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     addArea () {
@@ -295,7 +290,6 @@ const AreaComponent = {
     /**
      * 关闭添加错误消息.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     dismisAddAreaError () {
@@ -305,7 +299,6 @@ const AreaComponent = {
      * 删除地区.
      *
      * @param {Number} id
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     deleteArea (id) {
@@ -344,7 +337,6 @@ const AreaComponent = {
     /**
      * 更新地区数据
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     patchArea (id, key, value) {

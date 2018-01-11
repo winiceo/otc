@@ -66,7 +66,6 @@ class URL
      * Create the URL parse.
      *
      * @param string $uri
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(string $uri)
     {
@@ -104,7 +103,6 @@ class URL
      *
      * @param string $key
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(string $key)
     {
@@ -116,7 +114,6 @@ class URL
      *
      * @param string $key
      * @param mixed $value
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function set(string $key, $value)
     {
@@ -130,7 +127,6 @@ class URL
      *
      * @param string $key
      * @param string|array $value
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function addQuery(string $key, $value)
     {
@@ -167,7 +163,6 @@ class URL
      * Make url to string.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __toString()
     {

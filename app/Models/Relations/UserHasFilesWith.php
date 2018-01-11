@@ -12,7 +12,6 @@ trait UserHasFilesWith
      * user files.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function files()
     {

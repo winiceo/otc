@@ -116,7 +116,6 @@ export default {
      * @param {string} type
      * @param {string} message
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendAlert(type, message) {
       window.clearInterval(this.alert.interval);
@@ -136,7 +135,6 @@ export default {
      * 请求提现方式数据.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestCashSetting() {
       request.get(
@@ -158,7 +156,6 @@ export default {
      * 更新设置.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     updateHandle() {
       this.update = true;

@@ -228,8 +228,7 @@ const certificationComponent = {
        * @param {Integer} id
        * @param {Integer} status
        * @return void
-       * @author Seven Du <shiweidu@outlook.com>
-       */
+         */
       updateItemStatus(id, status) {
         this.certifications = this.certifications.map((certification) => {
           if (parseInt(id) === parseInt(certification.id)) {

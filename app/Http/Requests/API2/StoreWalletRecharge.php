@@ -24,7 +24,6 @@ class StoreWalletRecharge extends FormRequest
      *
      * @param \Genv\Otc\Repository\WalletRechargeType $repository
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function rules(WalletRechargeType $repository)
     {
@@ -38,7 +37,6 @@ class StoreWalletRecharge extends FormRequest
      * Get the valodation error message that apply to the request.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function messages()
     {

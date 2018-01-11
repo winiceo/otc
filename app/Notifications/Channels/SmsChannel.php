@@ -29,7 +29,6 @@ class SmsChannel
      *
      * @param \Illuminate\Contracts\Foundation\Application $app
      * @param \Overtrue\EasySms\EasySms $sms
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(ApplicationContract $app, EasySms $sms)
     {
@@ -51,6 +50,9 @@ class SmsChannel
         }
 
         $message = $notification->toSms($notifiable, $this->sms->getConfig());
+
+
+
 
         return $this->sms->send($to, $message);
     }

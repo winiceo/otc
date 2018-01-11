@@ -10,7 +10,6 @@ class PackagesSeeder extends Seeder
      * Run the seeder in packages.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function run()
     {

@@ -35,7 +35,6 @@ class InstallPasswordCommand extends Command
      * Create the console command instance.
      *
      * @param \Genv\Otc\Support\Configuration $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(Configuration $repository)
     {
@@ -48,7 +47,6 @@ class InstallPasswordCommand extends Command
      * The console command handle.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle()
     {

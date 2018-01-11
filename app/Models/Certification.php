@@ -44,7 +44,6 @@ class Certification extends Model
      * Get icon url.
      *
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getIconAttribute()
     {
@@ -55,7 +54,6 @@ class Certification extends Model
      * Get avatar trait.
      *
      * @return string|int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarKey()
     {
@@ -66,7 +64,6 @@ class Certification extends Model
      * avatar extensions.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarExtensions(): array
     {
@@ -77,7 +74,6 @@ class Certification extends Model
      * Avatar prefix.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarPrefix(): string
     {
@@ -88,7 +84,6 @@ class Certification extends Model
      * Has certification caregory.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function category()
     {

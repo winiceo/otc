@@ -87,7 +87,6 @@ export default {
      * @param {String} type
      * @param {String} message
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendAlert(type, message) {
       window.clearInterval(this.alert.interval);
@@ -101,7 +100,6 @@ export default {
      * Request support types.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestTypes() {
       this.load.status = 0;
@@ -124,7 +122,6 @@ export default {
      * Update support types.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     updateType() {
       this.updating = true;

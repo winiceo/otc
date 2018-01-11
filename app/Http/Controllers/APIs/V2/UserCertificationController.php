@@ -19,7 +19,6 @@ class UserCertificationController extends Controller
      * @param \Illuminate\Http\Request $request [description]
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response [description]
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseFactoryContract $response)
     {
@@ -36,7 +35,6 @@ class UserCertificationController extends Controller
      * @param \Genv\Otc\Models\Certification $certification
      * @param \Genv\Otc\Models\FileWith $fileWithModel
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(UserCertificationRequest $request,
                           ResponseFactoryContract $response,
@@ -76,7 +74,6 @@ class UserCertificationController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\FileWith $fileWithModel
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(UserCertificationRequest $request,
                            ResponseFactoryContract $response,
@@ -126,7 +123,6 @@ class UserCertificationController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Models\FileWith $fileWithModel
      * @return \Illuminate\Support\Collection
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function findNotWithFileModels(Request $request, FileWithModel $fileWithModel): Collection
     {

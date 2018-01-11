@@ -18,7 +18,6 @@ class WalletChargeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ContractResponse $response)
     {
@@ -51,7 +50,6 @@ class WalletChargeController extends Controller
      *
      * @param \Illuminate\Database\Eloquent\Builder &$query
      * @param \Illuminate\Http\Request $request
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function setWhere(Builder &$query, Request $request)
     {
@@ -69,7 +67,6 @@ class WalletChargeController extends Controller
      *
      * @param \Illuminate\Database\Eloquent\Builder &$query
      * @param \Illuminate\Http\Request $request
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function setAccountToBuilder(Builder &$query, Request $request)
     {
@@ -87,7 +84,6 @@ class WalletChargeController extends Controller
      *
      * @param \Illuminate\Database\Eloquent\Builder &$query
      * @param \Illuminate\Http\Request $request
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function setUserToBuilder(Builder &$query, Request $request)
     {
@@ -123,7 +119,6 @@ class WalletChargeController extends Controller
      * Get Query.
      *
      * @return \Illuminate\Database\Eloquent\Builder
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function query(): Builder
     {

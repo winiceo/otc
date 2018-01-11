@@ -342,7 +342,6 @@ class CertificationController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Models\FileWith $fileWithModel
      * @return \Illuminate\Support\Collection
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function findNotWithFileModels(Request $request, FileWithModel $fileWithModel): Collection
     {

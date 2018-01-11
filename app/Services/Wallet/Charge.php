@@ -43,7 +43,6 @@ class Charge
      * Create the service instance.
      *
      * @param \Genv\Otc\Repository\WalletPingPlusPlus $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(WalletPingPlusPlus $repository)
     {
@@ -63,7 +62,6 @@ class Charge
      *
      * @param string $charge
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function query(string $charge)
     {
@@ -76,7 +74,6 @@ class Charge
      * @param \Genv\Otc\Models\WalletCharge $charge
      * @param array $extra
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function create(WalletChargeModel $charge, array $extra = [])
     {
@@ -103,7 +100,6 @@ class Charge
      *
      * @param int $chargeId
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function formatChargeId(int $chargeId): string
     {
@@ -115,7 +111,6 @@ class Charge
      *
      * @param string $chargeId
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function unformatChargeId(string $chargeId): int
     {
@@ -130,7 +125,6 @@ class Charge
      * Get format prefix.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getPrefix(): string
     {
@@ -141,7 +135,6 @@ class Charge
      * Ser format prefix.
      *
      * @param string $prefix
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setPrefix(string $prefix)
     {

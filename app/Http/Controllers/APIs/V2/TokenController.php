@@ -19,7 +19,6 @@ class TokenController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Auth\JWTAuthToken $jwtAuthToken
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(Request $request, ResponseFactoryContract $response, JWTAuthToken $jwtAuthToken, User $model)
     {
@@ -57,7 +56,6 @@ class TokenController extends Controller
      * @param \Tymon\JWTAuth\JWTAuth $auth
      * @param string $token
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refresh(ResponseFactoryContract $response, JWTAuthToken $jwtAuthToken, string $token)
     {

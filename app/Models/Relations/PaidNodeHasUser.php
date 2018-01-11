@@ -20,7 +20,6 @@ trait PaidNodeHasUser
      * Paid node users.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function users()
     {
@@ -43,7 +42,6 @@ trait PaidNodeHasUser
      *
      * @param int $user User ID
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function paid(int $user, bool $filter = true): bool
     {

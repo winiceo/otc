@@ -30,6 +30,7 @@ class CrossDomain
         // $response->headers->set('Access-Control-Allow-Headers', implode(', ', ['Origin', 'Content-Type', 'Accept', 'Cookie']));
         $response->headers->set('Access-Control-Allow-Headers', '*');
         $response->headers->set('Access-Control-Allow-Origin', $this->getOrigin($request));
+        $response->headers->set('Accept', 'application/json');
 
         return $response;
     }

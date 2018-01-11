@@ -16,7 +16,6 @@ trait FindMarkdownFileTrait
      *
      * @param string $markdown
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function findMarkdownImageIDs(string $markdown): array
     {
@@ -29,7 +28,6 @@ trait FindMarkdownFileTrait
      * @param string $markdown
      * @param callable $call
      * @return \Illuminate\Support\Collection
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function findMarkdownImageModels(string $markdown, $call = null): Collection
     {
@@ -51,7 +49,6 @@ trait FindMarkdownFileTrait
      *
      * @param string $markdown
      * @return \Illuminate\Support\Collection
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function findMarkdownImageNotWithModels(string $markdown): Collection
     {

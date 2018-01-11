@@ -43,6 +43,7 @@ class Kernel extends HttpKernel
         'api' => [
             'throttle:120,1',
             'bindings',
+
         ],
 
         'admin' => [
@@ -66,5 +67,6 @@ class Kernel extends HttpKernel
         'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'ability'    => \Genv\Otc\Http\Middleware\UserAbility::class,
         'sensitive'  => \Genv\Otc\Http\Middleware\DisposeSensitive::class,
+
     ];
 }

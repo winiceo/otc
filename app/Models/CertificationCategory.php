@@ -42,7 +42,6 @@ class CertificationCategory extends Model
      * avatar extensions.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarExtensions(): array
     {
@@ -53,7 +52,6 @@ class CertificationCategory extends Model
      * Avatar prefix.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarPrefix(): string
     {
@@ -64,7 +62,6 @@ class CertificationCategory extends Model
      * Get icon url.
      *
      * @return string|null
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getIconAttribute()
     {
@@ -75,7 +72,6 @@ class CertificationCategory extends Model
      * Get avatar trait.
      *
      * @return string|int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getAvatarKey()
     {

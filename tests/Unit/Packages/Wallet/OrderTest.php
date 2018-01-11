@@ -15,7 +15,6 @@ class OrderTest extends TestCase
      * Test order.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testOrderSetAndGetAndConstruct()
     {
@@ -28,7 +27,6 @@ class OrderTest extends TestCase
      * Test hasSuccess method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testHasSuccess()
     {
@@ -50,7 +48,6 @@ class OrderTest extends TestCase
      * Test hasFail method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testHasFail()
     {
@@ -72,7 +69,6 @@ class OrderTest extends TestCase
      * Test hasWait method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testHasWait()
     {
@@ -94,7 +90,6 @@ class OrderTest extends TestCase
      * Test save method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testSave()
     {
@@ -121,7 +116,6 @@ class OrderTest extends TestCase
      * Test saveStateSucces method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testSaveStateSuccess()
     {
@@ -146,7 +140,6 @@ class OrderTest extends TestCase
      * Test saveStateFail method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testSaveStateFail()
     {
@@ -171,7 +164,6 @@ class OrderTest extends TestCase
      * Test autoComplete method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testAutoComplete()
     {
@@ -219,7 +211,6 @@ class OrderTest extends TestCase
      * Test getTargetTypeManager method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testGetTargetTypeManager()
     {

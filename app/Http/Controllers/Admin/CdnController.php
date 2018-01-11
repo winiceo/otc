@@ -14,7 +14,6 @@ class CdnController extends Controller
      * Get selected cdn.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getCdnSelected()
     {
@@ -25,7 +24,6 @@ class CdnController extends Controller
      * Get qiniu setting.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function qiniu()
     {
@@ -45,7 +43,6 @@ class CdnController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Support\Configuration $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setQiniu(Request $request, ConfigurationRepository $repository)
     {
@@ -68,7 +65,6 @@ class CdnController extends Controller
      * Get local disk.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getFilesystemDisk()
     {
@@ -79,7 +75,6 @@ class CdnController extends Controller
      * 设置本地文件系统公开磁盘.
      *
      * @param \Genv\Otc\Support\Configuration $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setPublicDisk(ConfigurationRepository $repository)
     {
@@ -95,7 +90,6 @@ class CdnController extends Controller
      * 获取 local 磁盘公开地址.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getLocalDisk()
     {
@@ -107,7 +101,6 @@ class CdnController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Support\Configuration $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setLocalDisk(Request $request, ConfigurationRepository $repository)
     {
@@ -124,7 +117,6 @@ class CdnController extends Controller
      * 获取 S3 Disk 配置.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getS3Disk()
     {
@@ -136,7 +128,6 @@ class CdnController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param \Genv\Otc\Support\Configuration $repository
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setS3Disk(Request $request, ConfigurationRepository $repository)
     {

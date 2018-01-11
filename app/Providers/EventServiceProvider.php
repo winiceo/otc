@@ -26,7 +26,6 @@ class EventServiceProvider extends ServiceProvider
      * Register the provider service.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function register()
     {

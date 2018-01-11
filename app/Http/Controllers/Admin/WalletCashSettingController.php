@@ -15,7 +15,6 @@ class WalletCashSettingController extends Controller
      * 获取提现设置.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(UserWalletCashType $typeRepository, WalletCashMinAmount $minAmountRepository)
     {
@@ -30,7 +29,6 @@ class WalletCashSettingController extends Controller
      *
      * @param Request $request
      * @return mexed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(Request $request, UserWalletCashType $typeRepository, WalletCashMinAmount $minAmountRepository)
     {

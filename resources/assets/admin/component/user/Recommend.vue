@@ -241,7 +241,6 @@ const RecommendComponent = {
      * 改变用户排序状态方法.
      *
      * @enum {up, down}
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     changeUserIdSort (sort) {
@@ -250,7 +249,6 @@ const RecommendComponent = {
     /**
      * 获取列表用户.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     getUsers () {

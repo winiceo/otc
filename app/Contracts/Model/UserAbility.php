@@ -11,7 +11,6 @@ interface UserAbility
      *
      * @param string $role
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function roles(string $role = '');
 
@@ -20,7 +19,6 @@ interface UserAbility
      *
      * @param string $ability
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function all(string $ability = '');
 }

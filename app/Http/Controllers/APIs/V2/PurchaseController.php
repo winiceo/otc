@@ -19,7 +19,6 @@ class PurchaseController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\PaidNode $node
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseContract $response, PaidNodeModel $node)
     {
@@ -37,7 +36,6 @@ class PurchaseController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\PaidNode $node
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
 
     /**
@@ -49,7 +47,6 @@ class PurchaseController extends Controller
      * @param \Genv\Otc\Models\WalletCharge $charge
      * @param \Genv\Otc\Models\PaidNode $node
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function pay(Request $request, ResponseContract $response, CacheContract $cache, WalletChargeModel $charge, PaidNodeModel $node)
     {

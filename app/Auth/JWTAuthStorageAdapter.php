@@ -16,7 +16,6 @@ class JWTAuthStorageAdapter implements Storage
      * @param string $key
      * @param string $value
      * @param int $minutes
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function add($key, $value, $minutes)
     {
@@ -43,7 +42,6 @@ class JWTAuthStorageAdapter implements Storage
      * @param string $key
      * @param string $value
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function forever($key, $value)
     {
@@ -59,7 +57,6 @@ class JWTAuthStorageAdapter implements Storage
      *
      * @param string $key
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get($key)
     {
@@ -87,7 +84,6 @@ class JWTAuthStorageAdapter implements Storage
      *
      * @param string $key
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function destroy($key)
     {
@@ -102,7 +98,6 @@ class JWTAuthStorageAdapter implements Storage
      * Remove all items associated.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {

@@ -71,7 +71,6 @@ class DevPackageHandler extends \Genv\Otc\Support\PackageHandler
      *
      * @param \Illuminate\Console\Command $command
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function makeSeederHandle(Command $command)
     {
@@ -106,7 +105,6 @@ class DevPackageHandler extends \Genv\Otc\Support\PackageHandler
      *
      * @param \Illuminate\Console\Command $command
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function makeModelHandle(Command $command)
     {

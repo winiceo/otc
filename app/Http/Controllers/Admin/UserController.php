@@ -24,7 +24,6 @@ class UserController extends Controller
      *
      * @param Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function users(Request $request)
     {
@@ -398,7 +397,6 @@ class UserController extends Controller
      *
      * @param User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function deleteUser(Request $request, User $user)
     {
@@ -418,7 +416,6 @@ class UserController extends Controller
      *
      * @param User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function showUser(Request $request, User $user)
     {
@@ -445,7 +442,6 @@ class UserController extends Controller
      * 获取用户信息设置.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function showSetting()
     {
@@ -467,7 +463,6 @@ class UserController extends Controller
      *
      * @param Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function storeSetting(Request $request)
     {

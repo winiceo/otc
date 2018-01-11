@@ -24,7 +24,6 @@ abstract class PackageHandler
      * Get the handles.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public static function getHandles()
     {
@@ -37,7 +36,6 @@ abstract class PackageHandler
      * @param string $name
      * @param PackageHandler|string $handler
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public static function loadHandleFrom(string $name, $handler)
     {
@@ -49,7 +47,6 @@ abstract class PackageHandler
      *
      * @param string $handle
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function formatHandleToDisplay(string $handle): string
     {
@@ -65,7 +62,6 @@ abstract class PackageHandler
      *
      * @param string $handle
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function formatHandleToMethod(string $handle): string
     {
@@ -80,7 +76,6 @@ abstract class PackageHandler
      * Get the handler methods.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function methods(): array
     {
@@ -102,7 +97,6 @@ abstract class PackageHandler
      * @param \Illuminate\Console\Command $command
      * @param string $handler
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle($command, $handler)
     {

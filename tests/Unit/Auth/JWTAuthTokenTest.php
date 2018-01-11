@@ -16,7 +16,6 @@ class JWTAuthTokenTest extends TestCase
      * Test guard.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testGuard()
     {
@@ -31,7 +30,6 @@ class JWTAuthTokenTest extends TestCase
      * Test create method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testCreate()
     {
@@ -46,7 +44,6 @@ class JWTAuthTokenTest extends TestCase
      * Test refresh method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testRefresh()
     {

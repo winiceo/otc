@@ -19,7 +19,6 @@ class Collection extends Model
      * Has collectible.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function collectible()
     {

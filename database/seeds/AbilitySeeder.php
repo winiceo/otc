@@ -11,7 +11,6 @@ class AbilitySeeder extends Seeder
      * Run Abilitys Node Insert Data Method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function run()
     {
@@ -23,7 +22,6 @@ class AbilitySeeder extends Seeder
      * 管理员节点.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createManagerPerm()
     {
@@ -126,7 +124,6 @@ class AbilitySeeder extends Seeder
      * 普通用户权限节点.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createOwnerPerm()
     {

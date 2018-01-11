@@ -44,7 +44,6 @@ class Qiniu implements FileUrlGeneratorContract
     /**
      * Create the qiniu cdn adapter instance.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct()
     {
@@ -63,7 +62,6 @@ class Qiniu implements FileUrlGeneratorContract
      * @param string $filename
      * @param array $extra
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function url(string $filename, array $extra = []): string
     {
@@ -79,7 +77,6 @@ class Qiniu implements FileUrlGeneratorContract
      *
      * @param \Genv\Otc\Cdn\Refresh $refresh
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refresh(Refresh $refresh)
     {
@@ -95,7 +92,6 @@ class Qiniu implements FileUrlGeneratorContract
      *
      * @param \Genv\Otc\Cdn\Refresh $refresh
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function refreshByCdn(Refresh $refresh)
     {
@@ -136,7 +132,6 @@ class Qiniu implements FileUrlGeneratorContract
      *
      * @param \Genv\Otc\Cdn\Refresh $refresh
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function refreshByObject(Refresh $refresh)
     {
@@ -185,7 +180,6 @@ class Qiniu implements FileUrlGeneratorContract
      * @param array $extra
      * @param bool $image
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function make(string $filename, array $extra = [], $image = false): string
     {
@@ -201,7 +195,6 @@ class Qiniu implements FileUrlGeneratorContract
      *
      * @param string $filename
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function makeFile(string $filename): string
     {
@@ -216,7 +209,6 @@ class Qiniu implements FileUrlGeneratorContract
      * @param string $filename
      * @param array $extra
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function makeImage(string $filename, array $extra = []): string
     {
@@ -235,7 +227,6 @@ class Qiniu implements FileUrlGeneratorContract
      *
      * @param string $url
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function makeToken(string $url): string
     {
@@ -272,7 +263,6 @@ class Qiniu implements FileUrlGeneratorContract
      * @param int $quality
      * @param int $blur
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function makeImageProcessor(int $width, int $height, int $quality, int $blur): string
     {
@@ -285,7 +275,6 @@ class Qiniu implements FileUrlGeneratorContract
      * @param string $filename
      * @param callable $call
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function validateImageAnd(string $filename, callable $call): string
     {
@@ -301,7 +290,6 @@ class Qiniu implements FileUrlGeneratorContract
      * Get support make file extension.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     private function getSupportExtensions(): array
     {

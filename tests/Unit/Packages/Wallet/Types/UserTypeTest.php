@@ -16,7 +16,6 @@ class UserTypeTest extends TestCase
      * Test Transfer.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testTransfer()
     {
@@ -52,7 +51,6 @@ class UserTypeTest extends TestCase
      * Test createOrder method.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testCreateOrder()
     {
@@ -84,7 +82,6 @@ class UserTypeTest extends TestCase
      * Test create order model.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function testCreateOrderModel()
     {

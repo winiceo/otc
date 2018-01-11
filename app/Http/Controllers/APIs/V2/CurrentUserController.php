@@ -17,7 +17,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseFactoryContract $response)
     {
@@ -37,7 +36,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(Request $request, ResponseFactoryContract $response)
     {
@@ -84,7 +82,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\VerificationCode $model
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function updatePhoneOrMail(Request $request, ResponseFactoryContract $response, VerificationCodeModel $model)
     {
@@ -137,7 +134,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function uploadBgImage(Request $request, ResponseFactoryContract $response)
     {
@@ -159,7 +155,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followers(Request $request, ResponseFactoryContract $response)
     {
@@ -188,7 +183,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followings(Request $request, ResponseFactoryContract $response)
     {
@@ -218,7 +212,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $target
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function attachFollowingUser(Request $request, ResponseFactoryContract $response, UserModel $target)
     {
@@ -251,7 +244,6 @@ class CurrentUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $target
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function detachFollowingUser(Request $request, ResponseFactoryContract $response, UserModel $target)
     {

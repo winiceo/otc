@@ -18,7 +18,6 @@ class VerificationCodeMessage extends Message
      *
      * @param \Illuminate\Config\Repository $config
      * @param int $code
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(ConfigRepository $config, int $code)
     {
@@ -31,7 +30,6 @@ class VerificationCodeMessage extends Message
      *
      * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getContent(GatewayInterface $gateway = null)
     {
@@ -45,7 +43,6 @@ class VerificationCodeMessage extends Message
      *
      * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getTemplate(GatewayInterface $gateway = null)
     {
@@ -59,7 +56,6 @@ class VerificationCodeMessage extends Message
      *
      * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getData(GatewayInterface $gateway = null)
     {
@@ -75,7 +71,6 @@ class VerificationCodeMessage extends Message
      *
      * @param \Overtrue\EasySms\Contracts\GatewayInterface $gateway
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function gatewayAliasName(GatewayInterface $gateway = null): string
     {

@@ -245,7 +245,6 @@ export default {
      * Compute search query.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     searchQuery() {
       return lodash.reduce(this.search, function (search, value, key) {
@@ -259,7 +258,6 @@ export default {
      * Pagination.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     pagination() {
       // 当前页
@@ -351,7 +349,6 @@ export default {
      *
      * @param {Object} options.query
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     '$route': function ({ query = {} } = {}) {
       this.requestCharge(
@@ -365,7 +362,6 @@ export default {
      *
      * @param {Number} page
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolvePaginationRoute(page) {
       return {
@@ -379,7 +375,6 @@ export default {
      *
      * @param {String} channel
      * @return {String}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolvePayChannel(channel) {
       const { [channel]: displayChannel = '余额' } = channelTypes;
@@ -391,7 +386,6 @@ export default {
      *
      * @param {Object} user
      * @return {String|null}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolveChargeUserDisplay(user = {}) {
       const { id, name } = user;
@@ -405,7 +399,6 @@ export default {
      * Request refresh.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestRefresh() {
       this.requestCharge({
@@ -418,7 +411,6 @@ export default {
      *
      * @param {Object} query
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolveQuery(query = this.$route.query) {
       return lodash.reduce(query, function (query, value, key) {
@@ -450,7 +442,6 @@ export default {
      *
      * @param {Object} params
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestCharge(params = {}) {
       this.load.status = 0;

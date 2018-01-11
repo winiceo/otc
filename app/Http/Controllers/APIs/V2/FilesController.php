@@ -25,7 +25,6 @@ class FilesController extends Controller
      * @param \Genv\Otc\Cdn\UrlManager $manager
      * @param \Genv\Otc\Models\FileWith $fileWith
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseContract $response, CdnUrlManager $cdn, FileWithModel $fileWith)
     {
@@ -59,7 +58,6 @@ class FilesController extends Controller
      * @param \Genv\Otc\Models\User|null $user
      * @param \Genv\Otc\Models\PaidNode  $pay
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveUserPaid($user, PaidNodeModel $node): bool
     {
@@ -75,7 +73,6 @@ class FilesController extends Controller
      * @param \Genv\Otc\Models\File $fileModel
      * @param \Genv\Otc\Models\FileWith $fileWith
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(StoreUploadFileRequest $request, ResponseContract $response, Carbon $dateTime, FileModel $fileModel, FileWithModel $fileWith)
     {
@@ -115,7 +112,6 @@ class FilesController extends Controller
      * @param \Genv\Otc\Models\FileWith $fileWith
      * @param string $hash
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function uploaded(Request $request, ResponseContract $response, FileModel $file, FileWithModel $fileWith, string $hash)
     {
@@ -139,7 +135,6 @@ class FilesController extends Controller
      * @param \Illuminate\Http\UploadedFile $file
      * @param callable $call
      * @return \Genv\Otc\Models\File
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function validateFileInDatabase(FileModel $fileModel, UploadedFile $file, callable $call): FileModel
     {
@@ -157,7 +152,6 @@ class FilesController extends Controller
      * @param \Genv\Otc\Models\User $user
      * @param \Genv\Otc\Models\File $file
      * @return \Genv\Otc\Models\FileWith
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveFileWith(FileWithModel $fileWith, UserModel $user, FileModel $file): FileWithModel
     {

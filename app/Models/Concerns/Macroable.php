@@ -15,7 +15,6 @@ trait Macroable
      *
      * @param string $key
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getRelationValue($key)
     {
@@ -33,7 +32,6 @@ trait Macroable
      * @param string $method
      * @param array $parameters
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __call($method, $parameters)
     {

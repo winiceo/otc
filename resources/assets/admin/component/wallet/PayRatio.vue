@@ -89,7 +89,6 @@ export default {
      * 请求转换值.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestRatio() {
       this.load.status = 0;
@@ -111,7 +110,6 @@ export default {
      * 发送转换值到服务端.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     updateRatio() {
       const ratio = this.ratio;

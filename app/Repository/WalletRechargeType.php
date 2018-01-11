@@ -20,7 +20,6 @@ class WalletRechargeType
      * Create the repository instance.
      *
      * @param \Illuminate\Contracts\Cache\Repository $cache
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(ContractsCacheRepository $cache)
     {
@@ -31,7 +30,6 @@ class WalletRechargeType
      * Get wallet recharge types.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(): array
     {
@@ -54,7 +52,6 @@ class WalletRechargeType
      *
      * @param array $types
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(array $types)
     {
@@ -71,7 +68,6 @@ class WalletRechargeType
      * Get the config cache key.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function cacheKey(): string
     {
@@ -82,7 +78,6 @@ class WalletRechargeType
      * Flush all cache.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {

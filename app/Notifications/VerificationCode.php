@@ -27,7 +27,6 @@ class VerificationCode extends Notification implements ShouldQueue
      * Create the verification notification instance.
      *
      * @param \Genv\Otc\Models\VerificationCode $model
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(VerificationCodeModel $model)
     {
@@ -64,7 +63,6 @@ class VerificationCode extends Notification implements ShouldQueue
      *
      * @param \Genv\Otc\Models\VerificationCode $notifiable
      * @return [type]
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function toSms(VerificationCodeModel $notifiable, Config $config)
     {

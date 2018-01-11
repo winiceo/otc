@@ -19,7 +19,6 @@ class Reward extends Model
      * Has rewardable.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function rewardable()
     {

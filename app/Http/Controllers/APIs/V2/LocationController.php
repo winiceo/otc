@@ -18,7 +18,6 @@ class LocationController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\Area $model
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function search(Request $request, ResponseFactoryContract $response, AreaModel $model)
     {

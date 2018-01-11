@@ -12,7 +12,6 @@ trait UserHasWalletCharge
      * User wallet charges.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function walletCharges()
     {

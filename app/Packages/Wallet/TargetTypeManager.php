@@ -15,7 +15,6 @@ class TargetTypeManager extends Manager
      * Set the manager order.
      *
      * @param \Genv\Otc\Packages\Wallet\Order $order
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setOrder(Order $order)
     {
@@ -26,7 +25,6 @@ class TargetTypeManager extends Manager
      * Get the order target type driver.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getDefaultDriver()
     {
@@ -37,7 +35,6 @@ class TargetTypeManager extends Manager
      * Create user target type driver.
      *
      * @return \Genv\Otc\Packages\TargetTypes\Target
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createUserDriver(): Target
     {

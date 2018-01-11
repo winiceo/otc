@@ -12,7 +12,6 @@ trait UserHasLike
      * Has likes for user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function likes()
     {
@@ -23,7 +22,6 @@ trait UserHasLike
      * Has be likeds for user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function belikeds()
     {

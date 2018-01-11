@@ -12,7 +12,6 @@ trait UserHasWalletCash
      * Wallet cshs.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function walletCashes()
     {

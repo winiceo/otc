@@ -48,7 +48,6 @@ export default {
      * Get logo href.
      *
      * @return {String|null}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     logo () {
       const logo = document.head.querySelector('meta[name="logo"]');
@@ -60,7 +59,6 @@ export default {
      * Get version.
      *
      * @return {String|null}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     version () {
       const version = document.head.querySelector('meta[name="version"]');
@@ -95,7 +93,6 @@ export default {
      * @param {Number} step
      * @param {Object} status
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     handleStep (step, status = {}) {
       this.step = step;
@@ -107,7 +104,6 @@ export default {
      *
      * @param {String} password
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     handlePassword (password) {
       this.password = password;

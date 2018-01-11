@@ -3,7 +3,7 @@
 namespace Genv\Otc\Jobs;
 
 use Genv\Otc\Models\User;
-use App\Mail\EmailConfirmation;
+use Genv\Otc\Mail\EmailConfirmation;
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Queue\SerializesModels;
 

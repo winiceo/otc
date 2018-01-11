@@ -22,14 +22,17 @@ class AdvertsController extends Controller
 
     protected $advert;
 
-    public function __construct(AdvertRepository $advert)
-    {
-        $this->middleware('auth')->except(['index', 'show']);
-        $this->advert=$advert;
-        $coins=CoinHelpers::get();
-        View::share('coins', $coins);
-
-    }
+//    public function __construct(AdvertRepository $advert)
+//    {
+//
+////
+////        $this->middleware('auth')->except(['index', 'show']);
+////        $this->advert=$advert;
+////        $coins=CoinHelpers::get();
+////        View::share('coins', $coins);
+//
+//
+//    }
 
 
     public function create()
@@ -40,6 +43,7 @@ class AdvertsController extends Controller
         $price=\GuzzleHttp\json_decode($price);
 
         leven('price',$price->sell);
+
 
 
         return view('advert.create', compact('coins'));

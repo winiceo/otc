@@ -14,7 +14,6 @@ class ClientsController
      * Get all clients.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index()
     {
@@ -26,7 +25,6 @@ class ClientsController
      *
      * @param \Genv\PlusID\Admin\Requests\CreateClientRequest $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(CreateClientRequest $request)
     {
@@ -51,7 +49,6 @@ class ClientsController
      *
      * @param \Genv\PlusID\Models\Client $client
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function destroy(ClientModel $client)
     {
@@ -66,7 +63,6 @@ class ClientsController
      * @param \Genv\PlusID\Admin\Requests\UpdateClientRequest $request
      * @param \Genv\PlusID\Models\Client $client
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(UpdateClientRequest $request, ClientModel $client)
     {

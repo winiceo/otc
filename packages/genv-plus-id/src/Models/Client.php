@@ -21,7 +21,6 @@ class Client extends Model
      * @param array $action
      * @param string $key
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function sign(array $action, string $key = ''): string
     {

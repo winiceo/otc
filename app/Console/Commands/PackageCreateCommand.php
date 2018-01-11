@@ -35,7 +35,6 @@ class PackageCreateCommand extends Command
      * Run the command.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle()
     {
@@ -89,7 +88,6 @@ class PackageCreateCommand extends Command
      * @param string $outputPath
      * @param array $variable
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function putStub(Finder $stubs, string $outputPath, array $variable = [])
     {
@@ -126,7 +124,6 @@ class PackageCreateCommand extends Command
      * Find stubs.
      *
      * @return \Symfony\Component\Finder\Finder
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function findStub(): Finder
     {
@@ -143,7 +140,6 @@ class PackageCreateCommand extends Command
      *
      * @param string $namespace
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function formatNamespace(string $namespace): string
     {
@@ -160,7 +156,6 @@ class PackageCreateCommand extends Command
      *
      * @param string $name [description]
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function cameCase(string $name): string
     {
@@ -174,7 +169,6 @@ class PackageCreateCommand extends Command
      * Question name.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function questionName(): string
     {
@@ -193,7 +187,6 @@ class PackageCreateCommand extends Command
      * Init composer repository config.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function initRepository()
     {

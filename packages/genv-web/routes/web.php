@@ -26,7 +26,7 @@ Route::as('site.')->namespace('Genv\Web\Web\Controllers')->group(function () {
    // Route::get('/buy', 'TradeController@buy')->name('buy');
 //    Route::get('/sell', 'TradeController@sell')->name('sell');
 //    Route::get('/advert', 'TradeController@sell')->name('advert');
-        Route::get('/login', 'AccountController@index')->name('login');
+        Route::get('/login3', 'AccountController@index')->name('login');
         Route::get('/logout', 'AccountController@index')->name('logout');
         Route::get('/register', 'AccountController@index')->name('register');
         Route::get('/adf', 'AccountController@index')->name('users.show');

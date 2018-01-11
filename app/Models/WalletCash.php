@@ -17,7 +17,6 @@ class WalletCash extends Model
      * User.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user()
     {

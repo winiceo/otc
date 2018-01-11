@@ -12,7 +12,6 @@ class RoleSeeder extends Seeder
      * 开始运行 seeder.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function run()
     {
@@ -29,7 +28,6 @@ class RoleSeeder extends Seeder
      * 创始人角色.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createFounderRole()
     {
@@ -48,7 +46,6 @@ class RoleSeeder extends Seeder
      * 业主，普通用户角色.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createOwnerRole()
     {

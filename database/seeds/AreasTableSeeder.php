@@ -113,7 +113,6 @@ class AreasTableSeeder extends Seeder
      * Get areas data.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function datas(): array
     {

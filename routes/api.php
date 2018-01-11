@@ -1,25 +1,88 @@
 <?php
 
-
-
 use Genv\Otc\EaseMobIm;
 use Illuminate\Support\Facades\Route;
 use Genv\Otc\Http\Controllers\APIs\V2 as API2;
 use Illuminate\Contracts\Routing\Registrar as RouteContract;
 
-Route::any('/develop', \Genv\Otc\Http\Controllers\DevelopController::class.'@index');
+Route::any('/develop', \Genv\Otc\Http\Controllers\DevelopController::class . '@index');
 
-/*
-|--------------------------------------------------------------------------
-| RESTful API version 2.
-|--------------------------------------------------------------------------
-|
-| Define the version of the interface that conforms to most of the
-| REST ful specification.
-|
-*/
 
+Route::group(['prefix' => 'v1', 'namespace' => 'Genv\Otc\Http\Controllers\Api\V2'], function (RouteContract $api) {
+
+
+    $api->post('user/login', 'AuthController@login');
+
+    $api->post('/user/register', AuthController::class.'@register');//->middleware('sensitive:name');
+         ;
+
+    $api->group(['prefix' => 'user','middleware' => 'auth:api'], function () use ($api) {
+        $api->post('/profile', 'CurrentUserController@show');
+        $api->post('/safe/check', 'UserController@check');
+        $api->post('/advert', 'AdvertController@getByUser');
+        $api->post('/order', 'OrderController@getByUser');
+        $api->post('/balance', 'CurrentUserController@getBalances');
+
+    });
+
+    $api->group(['prefix' => 'wallet', 'middleware' => ['auth:api']], function () use ($api) {
+
+        $api->post('/deposit/{id}', 'WalletController@deposit');
+        $api->post('/withdraw', 'WalletController@withdraw');
+        $api->post('/withdraw/history', 'WalletController@history');
+
+    });
+
+
+    $api->group(['prefix' => 'advert', 'middleware' => ['auth:api']], function () use ($api) {
+        $api->post('', 'AdvertController@overview');
+        $api->post('/store', 'AdvertController@store');
+        $api->post('/detail/{id}', 'AdvertController@show');
+    });
+
+
+    $api->group(['prefix' => 'verifycodes'], function () use ($api) {
+        $api->post('', 'VerifyCodeController@store');
+        $api::post('check_code','VerifyCodeController@check_code');
+
+        $api->post('/register', 'VerifyCodeController@storeByRegister');
+    });
+
+
+//    $api->group(['prefix' => 'verifycodes'], function (RouteContract $api) {
+//
+//        /*
+//        | 注册验证码
+//        */
+//
+//        $api->post('/register', API2\VerifyCodeController::class . '@storeByRegister');
+//
+//        /*
+//        | 已存在用户验证码
+//        */
+//
+//        $api->post('/', API2\VerifyCodeController::class . '@store');
+//    });
+
+    $api->group(['prefix' => 'order', 'middleware' => ['auth:api']], function () use ($api) {
+        $api->post('/detail/{id}', 'OrderController@show');
+        $api->post('/store', 'OrderController@store');
+        $api->post('/pay', 'OrderController@pay');
+        $api->post('/cancel', 'OrderController@cancel');
+        $api->post('/release', 'OrderController@release');
+        $api->post('/comment', 'OrderController@comment');
+        $api->post('/complaint', 'OrderController@complaint');
+
+    });
+
+    $api->group(['prefix' => 'im', 'middleware' => ['auth:api']], function () use ($api) {
+        $api->post('/message/send', 'ImController@send');
+        $api->post('/message/history', 'ImController@history');
+        $api->post('/upload', 'ImController@upload');
+    });
+});
 Route::group(['prefix' => 'v2'], function (RouteContract $api) {
+
 
     /*
     |-----------------------------------------------------------------------
@@ -32,40 +95,40 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
     |
     */
 
-    $api->post('/pingpp/webhooks', API2\PingPlusPlusChargeWebHooks::class.'@webhook');
+    $api->post('/pingpp/webhooks', API2\PingPlusPlusChargeWebHooks::class . '@webhook');
 
     /*
     | 应用启动配置.
     */
 
-    $api->get('/bootstrappers', API2\BootstrappersController::class.'@show');
+    $api->get('/bootstrappers', API2\BootstrappersController::class . '@show');
 
     // Create user authentication token
-    $api->post('/tokens', API2\TokenController::class.'@store');
+    $api->post('/tokens', API2\TokenController::class . '@store');
 
     // Refresh token
-    $api->patch('/tokens/{token}', API2\TokenController::class.'@refresh');
+    $api->patch('/tokens/{token}', API2\TokenController::class . '@refresh');
 
     // Search location.
-    $api->get('/locations/search', API2\LocationController::class.'@search');
+    $api->get('/locations/search', API2\LocationController::class . '@search');
 
     // Get hot locations.
     // @GET /api/v2/locations/hots
-    $api->get('/locations/hots', API2\LocationController::class.'@hots');
+    $api->get('/locations/hots', API2\LocationController::class . '@hots');
 
     // Get Advertising space
-    $api->get('/advertisingspace', API2\AdvertisingController::class.'@index');
+    $api->get('/advertisingspace', API2\AdvertisingController::class . '@index');
 
     // Get Advertising.
-    $api->get('/advertisingspace/{space}/advertising', API2\AdvertisingController::class.'@advertising');
-    $api->get('/advertisingspace/advertising', API2\AdvertisingController::class.'@batch');
+    $api->get('/advertisingspace/{space}/advertising', API2\AdvertisingController::class . '@advertising');
+    $api->get('/advertisingspace/advertising', API2\AdvertisingController::class . '@batch');
 
     // Get a html for about us.
-    $api->get('/aboutus', API2\SystemController::class.'@about');
+    $api->get('/aboutus', API2\SystemController::class . '@about');
 
     // Get all tags.
     // @Get /api/v2/tags
-    $api->get('/tags', API2\TagController::class.'@index');
+    $api->get('/tags', API2\TagController::class . '@index');
 
     /*
     |-----------------------------------------------------------------------
@@ -82,13 +145,13 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
         | 注册验证码
         */
 
-        $api->post('/register', API2\VerifyCodeController::class.'@storeByRegister');
+        $api->post('/register', API2\VerifyCodeController::class . '@storeByRegister');
 
         /*
         | 已存在用户验证码
         */
 
-        $api->post('/', API2\VerifyCodeController::class.'@store');
+        $api->post('/', API2\VerifyCodeController::class . '@store');
     });
 
     // 排行榜相关
@@ -97,21 +160,21 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
 
         // 获取粉丝排行
         // @GET /api/v2/user/ranks/followers
-        $api->get('/followers', API2\RankController::class.'@followers');
+        $api->get('/followers', API2\RankController::class . '@followers');
 
         // 获取财富排行
         // @GET /api/v2/user/ranks/balance
-        $api->get('/balance', API2\RankController::class.'@balance');
+        $api->get('/balance', API2\RankController::class . '@balance');
 
         // 获取收入排行
         // @GET /api/v2/user/ranks/income
-        $api->get('/income', API2\RankController::class.'@income');
+        $api->get('/income', API2\RankController::class . '@income');
     });
     /*
     | 获取文件.
     */
 
-    tap($api->get('/files/{fileWith}', API2\FilesController::class.'@show'), function ($route) {
+    tap($api->get('/files/{fileWith}', API2\FilesController::class . '@show'), function ($route) {
         $route->setAction(array_merge($route->getAction(), [
             'middleware' => 'bindings',
         ]));
@@ -131,22 +194,22 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
     */
     $api->group(['prefix' => 'user'], function (RouteContract $api) {
         // @get find users by phone
-        $api->post('/find-by-phone', API2\FindUserController::class.'@findByPhone');
+        $api->post('/find-by-phone', API2\FindUserController::class . '@findByPhone');
 
         // @get popular users
-        $api->get('/populars', API2\FindUserController::class.'@populars');
+        $api->get('/populars', API2\FindUserController::class . '@populars');
 
         // @get latest users
-        $api->get('/latests', API2\FindUserController::class.'@latests');
+        $api->get('/latests', API2\FindUserController::class . '@latests');
 
         // @get recommended users
-        $api->get('/recommends', API2\FindUserController::class.'@recommends');
+        $api->get('/recommends', API2\FindUserController::class . '@recommends');
 
         // @get search name
-        $api->get('/search', API2\FindUserController::class.'@search');
+        $api->get('/search', API2\FindUserController::class . '@search');
 
         // @get find users by user tags
-        $api->get('/find-by-tags', API2\FindUserController::class.'@findByTags');
+        $api->get('/find-by-tags', API2\FindUserController::class . '@findByTags');
     });
 
     $api->group(['prefix' => 'users'], function (RouteContract $api) {
@@ -155,44 +218,44 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
         | 创建用户
         */
 
-        $api->post('/', API2\UserController::class.'@store')
+        $api->post('/', API2\UserController::class . '@store')
             ->middleware('sensitive:name');
 
         /*
         | 批量获取用户
         */
 
-        $api->get('/', API2\UserController::class.'@index');
+        $api->get('/', API2\UserController::class . '@index');
 
         /*
         | 获取单个用户资源
          */
 
-        $api->get('/{user}', API2\UserController::class.'@show');
+        $api->get('/{user}', API2\UserController::class . '@show');
 
         /*
         | 用户头像
          */
 
-        tap($api->get('/{user}/avatar', API2\UserAvatarController::class.'@show'), function ($route) {
+        tap($api->get('/{user}/avatar', API2\UserAvatarController::class . '@show'), function ($route) {
             $route->setAction(array_merge($route->getAction(), [
                 'middleware' => 'bindings',
             ]));
         });
 
         // 获取用户关注者
-        $api->get('/{user}/followers', API2\UserFollowController::class.'@followers');
+        $api->get('/{user}/followers', API2\UserFollowController::class . '@followers');
 
         // 获取用户关注的用户
-        $api->get('/{user}/followings', API2\UserFollowController::class.'@followings');
+        $api->get('/{user}/followings', API2\UserFollowController::class . '@followings');
 
         // Get the user's tags.
         // @GET /api/v2/users/:user/tags
-        $api->get('/{user}/tags', API2\TagUserController::class.'@userTgas');
+        $api->get('/{user}/tags', API2\TagUserController::class . '@userTgas');
     });
 
     // Retrieve user password.
-    $api->put('/user/retrieve-password', API2\ResetPasswordController::class.'@retrieve');
+    $api->put('/user/retrieve-password', API2\ResetPasswordController::class . '@retrieve');
 
     /*
     |-----------------------------------------------------------------------
@@ -222,40 +285,40 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
             | 获取当前用户
             */
 
-            $api->get('/', API2\CurrentUserController::class.'@show');
+            $api->get('/', API2\CurrentUserController::class . '@show');
 
             // Update the authenticated user
-            $api->patch('/', API2\CurrentUserController::class.'@update');
+            $api->patch('/', API2\CurrentUserController::class . '@update');
 
             // Update phone or email of the authenticated user.
-            $api->put('/', API2\CurrentUserController::class.'@updatePhoneOrMail');
+            $api->put('/', API2\CurrentUserController::class . '@updatePhoneOrMail');
 
             // 查看用户未读消息统计
-            $api->get('/unread-count', API2\UserUnreadCountController::class.'@index');
+            $api->get('/unread-count', API2\UserUnreadCountController::class . '@index');
 
             /*
             | 用户收到的评论
             */
 
-            $api->get('/comments', API2\UserCommentController::class.'@index');
+            $api->get('/comments', API2\UserCommentController::class . '@index');
 
             /*
             | 用户收到的赞
              */
 
-            $api->get('/likes', API2\UserLikeController::class.'@index');
+            $api->get('/likes', API2\UserLikeController::class . '@index');
 
             // User certification.
             $api->group(['prefix' => 'certification'], function (RouteContract $api) {
 
                 // Send certification.
-                $api->post('/', API2\UserCertificationController::class.'@store');
+                $api->post('/', API2\UserCertificationController::class . '@store');
 
                 // Update certification.
-                $api->patch('/', API2\UserCertificationController::class.'@update');
+                $api->patch('/', API2\UserCertificationController::class . '@update');
 
                 // Get user certification.
-                $api->get('/', API2\UserCertificationController::class.'@show');
+                $api->get('/', API2\UserCertificationController::class . '@show');
             });
 
             /*
@@ -268,40 +331,40 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
                 | 用户通知列表
                  */
 
-                $api->get('/', API2\UserNotificationController::class.'@index');
+                $api->get('/', API2\UserNotificationController::class . '@index');
 
                 /*
                 | 通知详情
                  */
 
-                $api->get('/{notification}', API2\UserNotificationController::class.'@show');
+                $api->get('/{notification}', API2\UserNotificationController::class . '@show');
 
                 /*
                 | 阅读通知，可以使用资源模型阅读单条，也可以使用资源组形式，阅读标注多条.
                  */
 
-                $api->patch('/{notification?}', API2\UserNotificationController::class.'@markAsRead');
+                $api->patch('/{notification?}', API2\UserNotificationController::class . '@markAsRead');
 
                 /*
                     标记所有未读消息为已读
                  */
-                $api->put('/all', API2\UserNotificationController::class.'@markAllAsRead');
+                $api->put('/all', API2\UserNotificationController::class . '@markAllAsRead');
             });
 
             // send a feedback.
-            $api->post('/feedback', API2\SystemController::class.'@createFeedback');
+            $api->post('/feedback', API2\SystemController::class . '@createFeedback');
 
             // get a list of system conversation.
-            $api->get('/conversations', API2\SystemController::class.'@getConversations');
+            $api->get('/conversations', API2\SystemController::class . '@getConversations');
 
             /*
             | 更新当前用户头像
              */
 
-            $api->post('/avatar', API2\UserAvatarController::class.'@update');
+            $api->post('/avatar', API2\UserAvatarController::class . '@update');
 
             // Update background image of the authenticated user.
-            $api->post('/bg', API2\CurrentUserController::class.'@uploadBgImage');
+            $api->post('/bg', API2\CurrentUserController::class . '@uploadBgImage');
 
             /*
             | 用户关注
@@ -310,26 +373,26 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
             $api->group(['prefix' => 'followings'], function (RouteContract $api) {
 
                 // 我关注的人列表
-                $api->get('/', API2\CurrentUserController::class.'@followings');
+                $api->get('/', API2\CurrentUserController::class . '@followings');
 
                 // 关注一个用户
-                $api->put('/{target}', API2\CurrentUserController::class.'@attachFollowingUser');
+                $api->put('/{target}', API2\CurrentUserController::class . '@attachFollowingUser');
 
                 // 取消关注一个用户
-                $api->delete('/{target}', API2\CurrentUserController::class.'@detachFollowingUser');
+                $api->delete('/{target}', API2\CurrentUserController::class . '@detachFollowingUser');
             });
 
             $api->group(['prefix' => 'followers'], function (RouteContract $api) {
 
                 // 获取关注我的用户
-                $api->get('/', API2\CurrentUserController::class.'@followers');
+                $api->get('/', API2\CurrentUserController::class . '@followers');
             });
 
             // 获取相互关注的用户
-            $api->get('/follow-mutual', API2\CurrentUserController::class.'@followMutual');
+            $api->get('/follow-mutual', API2\CurrentUserController::class . '@followMutual');
 
             // Reset password.
-            $api->put('/password', API2\ResetPasswordController::class.'@reset');
+            $api->put('/password', API2\ResetPasswordController::class . '@reset');
 
             // The tags route of the authenticated user.
             // @Route /api/v2/user/tags
@@ -337,35 +400,33 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
 
                 // Get all tags of the authenticated user.
                 // @GET /api/v2/user/tags
-                $api->get('/', API2\TagUserController::class.'@index');
+                $api->get('/', API2\TagUserController::class . '@index');
 
                 // Attach a tag for the authenticated user.
                 // @PUT /api/v2/user/tags/:tag
-                $api->put('/{tag}', API2\TagUserController::class.'@store');
+                $api->put('/{tag}', API2\TagUserController::class . '@store');
 
                 // Detach a tag for the authenticated user.
                 // @DELETE /api/v2/user/tags/:tag
-                $api->delete('/{tag}', API2\TagUserController::class.'@destroy');
+                $api->delete('/{tag}', API2\TagUserController::class . '@destroy');
             });
 
             // 打赏用户
-            $api->post('/{target}/rewards', API2\UserRewardController::class.'@store');
+            $api->post('/{target}/rewards', API2\UserRewardController::class . '@store');
 
             /*
              * 解除手机号码绑定.
              *
              * @DELETE /api/v2/user/phone
-             * @author Seven Du <shiweidu@outlook.com>
-             */
-            $api->delete('/phone', API2\UserPhoneController::class.'@delete');
+                     */
+            $api->delete('/phone', API2\UserPhoneController::class . '@delete');
 
             /*
              * 解除用户邮箱绑定.
              *
              * @DELETE /api/v2/user/email
-             * @author Seven Du <shiweidu@outlook.com>
-             */
-            $api->delete('/email', API2\UserEmailController::class.'@delete');
+                     */
+            $api->delete('/email', API2\UserEmailController::class . '@delete');
         });
 
         /*
@@ -383,69 +444,69 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
             | 获取钱包配置信息
              */
 
-            $api->get('/', API2\WalletConfigController::class.'@show');
+            $api->get('/', API2\WalletConfigController::class . '@show');
 
             /*
             | 获取提现记录
              */
-            $api->get('/cashes', API2\WalletCashController::class.'@show');
+            $api->get('/cashes', API2\WalletCashController::class . '@show');
 
             /*
             | 发起提现申请
              */
 
-            $api->post('/cashes', API2\WalletCashController::class.'@store');
+            $api->post('/cashes', API2\WalletCashController::class . '@store');
 
             /*
             | 充值钱包余额
              */
 
-            $api->post('/recharge', API2\WalletRechargeController::class.'@store');
+            $api->post('/recharge', API2\WalletRechargeController::class . '@store');
 
             /*
             | 获取凭据列表
              */
 
-            $api->get('/charges', API2\WalletChargeController::class.'@list');
+            $api->get('/charges', API2\WalletChargeController::class . '@list');
 
             /*
             | 获取单条凭据
              */
 
-            $api->get('/charges/{charge}', API2\WalletChargeController::class.'@show');
+            $api->get('/charges/{charge}', API2\WalletChargeController::class . '@show');
         });
 
         /*
         | 检查一个文件的 md5, 如果存在着创建一个 file with id.
          */
 
-        $api->get('/files/uploaded/{hash}', API2\FilesController::class.'@uploaded');
+        $api->get('/files/uploaded/{hash}', API2\FilesController::class . '@uploaded');
 
         /*
         | 上传一个文件
          */
 
-        $api->post('/files', API2\FilesController::class.'@store');
+        $api->post('/files', API2\FilesController::class . '@store');
 
         /*
         | 显示一个付费节点
          */
 
-        $api->get('/purchases/{node}', API2\PurchaseController::class.'@show');
+        $api->get('/purchases/{node}', API2\PurchaseController::class . '@show');
 
         /*
         | 为一个付费节点支付
          */
 
-        $api->post('/purchases/{node}', API2\PurchaseController::class.'@pay');
+        $api->post('/purchases/{node}', API2\PurchaseController::class . '@pay');
 
         $api->group(['prefix' => 'report'], function (RouteContract $api) {
 
             // 举报一个用户
-            $api->post('/users/{user}', API2\ReportController::class.'@user');
+            $api->post('/users/{user}', API2\ReportController::class . '@user');
 
             // 举报一条评论
-            $api->post('/comments/{comment}', API2\ReportController::class.'@comment');
+            $api->post('/comments/{comment}', API2\ReportController::class . '@comment');
         });
 
         /*
@@ -454,40 +515,40 @@ Route::group(['prefix' => 'v2'], function (RouteContract $api) {
         $api->group(['prefix' => 'easemob'], function (RouteContract $api) {
 
             // 注册环信用户(单个)
-            $api->post('register/{user_id}', EaseMobIm\EaseMobController::class.'@createUser')->where(['user_id' => '[0-9]+']);
+            $api->post('register/{user_id}', EaseMobIm\EaseMobController::class . '@createUser')->where(['user_id' => '[0-9]+']);
 
             //批量注册环信用户
-            $api->post('/register', EaseMobIm\EaseMobController::class.'@createUsers');
+            $api->post('/register', EaseMobIm\EaseMobController::class . '@createUsers');
 
             // 重置用户环信密码
-            $api->put('/password', EaseMobIm\EaseMobController::class.'@resetPassword');
+            $api->put('/password', EaseMobIm\EaseMobController::class . '@resetPassword');
 
             // 获取环信用户密码
-            $api->get('/password', EaseMobIm\EaseMobController::class.'@getPassword');
+            $api->get('/password', EaseMobIm\EaseMobController::class . '@getPassword');
 
             // 创建群组
-            $api->post('/group', EaseMobIm\GroupController::class.'@store');
+            $api->post('/group', EaseMobIm\GroupController::class . '@store');
 
             // 修改群组信息
-            $api->patch('/group', EaseMobIm\GroupController::class.'@update');
+            $api->patch('/group', EaseMobIm\GroupController::class . '@update');
 
             // 删除群组
-            $api->delete('/group', EaseMobIm\GroupController::class.'@delete');
+            $api->delete('/group', EaseMobIm\GroupController::class . '@delete');
 
             // 获取指定群组信息
-            $api->get('/group', EaseMobIm\GroupController::class.'@getGroup');
+            $api->get('/group', EaseMobIm\GroupController::class . '@getGroup');
 
             // 获取群头像
-            $api->get('/group/face', EaseMobIm\GroupController::class.'@getGroupFace');
+            $api->get('/group/face', EaseMobIm\GroupController::class . '@getGroupFace');
 
             // 添加群成员
-            $api->post('/group/member', EaseMobIm\GroupController::class.'@addGroupMembers');
+            $api->post('/group/member', EaseMobIm\GroupController::class . '@addGroupMembers');
 
             // 移除群成员
-            $api->delete('/group/member', EaseMobIm\GroupController::class.'@removeGroupMembers');
+            $api->delete('/group/member', EaseMobIm\GroupController::class . '@removeGroupMembers');
 
             // 获取聊天记录Test
-            $api->get('/group/message', EaseMobIm\EaseMobController::class.'@getMessage');
+            $api->get('/group/message', EaseMobIm\EaseMobController::class . '@getMessage');
         });
     });
 });

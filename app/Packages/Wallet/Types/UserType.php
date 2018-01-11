@@ -18,7 +18,6 @@ class UserType extends Type
      * @param int|\Genv\Otc\Models\User $target
      * @param int $amount
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function transfer($owner, $target, int $amount): bool
     {
@@ -34,7 +33,6 @@ class UserType extends Type
      *
      * @param int|\Genv\Otc\Models\User $user
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveGetUserId($user): int
     {
@@ -52,7 +50,6 @@ class UserType extends Type
      * @param int $target
      * @param int $amount
      * @return \Genv\Otc\Packages\Wallet\Order
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function createOrder(int $owner, int $target, int $amount): Order
     {
@@ -66,7 +63,6 @@ class UserType extends Type
      * @param int $target
      * @param int $amount
      * @return \Ziyi\Plus\Models\WalletOrder
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function createOrderModel(int $owner, int $target, int $amount): WalletOrderModel
     {

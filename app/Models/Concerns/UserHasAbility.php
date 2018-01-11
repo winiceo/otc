@@ -24,7 +24,6 @@ trait UserHasAbility
      *        ability($ability);
      *        ability($role, $ability);
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function ability(...$parameters)
     {
@@ -45,7 +44,6 @@ trait UserHasAbility
      *
      * @param string $role
      * @return mied
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function roles(string $role = '')
     {
@@ -60,7 +58,6 @@ trait UserHasAbility
      * Resolve ability service.
      *
      * @return \Genv\Otc\Services\UserAbility
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveAbility()
     {

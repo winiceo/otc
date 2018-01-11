@@ -19,7 +19,6 @@ class TagCategory extends Model
      * Has tags of the category.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function tags()
     {

@@ -17,7 +17,6 @@ class WalletRechargeTypeController extends Controller
      * @param \Genv\Otc\Repository\WalletRechargeType $repository
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(RechargeTypeRepository $repository, ContractResponse $response)
     {
@@ -33,7 +32,6 @@ class WalletRechargeTypeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(RechargeTypeRepository $repository, Request $request, ContractResponse $response)
     {
@@ -52,7 +50,6 @@ class WalletRechargeTypeController extends Controller
      * Get support types.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getSupportTypes(): array
     {
@@ -76,7 +73,6 @@ class WalletRechargeTypeController extends Controller
      * Get validate rules.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function rules(): array
     {
@@ -89,7 +85,6 @@ class WalletRechargeTypeController extends Controller
      * Get validate error messages.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function validateErrorMessages(): array
     {

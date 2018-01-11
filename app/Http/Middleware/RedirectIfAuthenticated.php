@@ -33,10 +33,10 @@ class RedirectIfAuthenticated
      * logged in redirect path.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function redirectTo(): string
     {
+
         return request()->input('redirect') ?: '';
     }
 }

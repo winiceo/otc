@@ -27,7 +27,6 @@ class VerificationCode extends Model
      * Has User.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user()
     {
@@ -42,7 +41,6 @@ class VerificationCode extends Model
      *
      * @return Builder 查询对象
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByValid(Builder $query, int $second = 300): Builder
@@ -61,7 +59,6 @@ class VerificationCode extends Model
      *
      * @return int 剩余时间
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function makeSurplusSecond(int $vaildSecond = 60): int

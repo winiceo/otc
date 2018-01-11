@@ -30,7 +30,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Create wallet.
      *
      * @param int|\Genv\Otc\Models\User $user
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct($user = null)
     {
@@ -43,7 +42,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Set user.
      *
      * @param int|\Genv\Otc\Models\User $user
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setUser($user)
     {
@@ -56,7 +54,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Get the user wallet model.
      *
      * @return \Genv\Otc\Models\NewWallet
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getWalletModel(): WalletModel
     {
@@ -71,7 +68,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Increment the user wallet balance.
      *
      * @param int $amount
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function increment(int $amount)
     {
@@ -88,7 +84,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Decrement the user wallet balance.
      *
      * @param int $amount
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function decrement(int $amount)
     {
@@ -106,7 +101,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      *
      * @param int $amount
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function enough(int $amount): bool
     {
@@ -121,7 +115,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * @param int|\Genv\Otc\Models\User $user
      * @return \Genv\Otc\Models\User
      * @throws \Exception
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveUser($user): UserModel
     {
@@ -141,7 +134,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      *
      * @param \Genv\Otc\Models\User $user
      * @return \Genv\Otc\Models\User
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveWallet(UserModel $user): UserModel
     {
@@ -162,7 +154,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Convert the model instance to an array.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function toArray()
     {
@@ -175,7 +166,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * @param int $options
      * @return string
      * @throws \RuntimeException
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function toJson($options = 0)
     {
@@ -192,7 +182,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Convert the object into something JSON serializable.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function jsonSerialize()
     {
@@ -203,7 +192,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      * Convert the model to its string representation.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __toString()
     {
@@ -215,7 +203,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      *
      * @param int $user
      * @return \Genv\Otc\Models\User
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function userFindOrFail(int $user): UserModel
     {
@@ -227,7 +214,6 @@ class Wallet implements Arrayable, Jsonable, JsonSerializable
      *
      * @param int $user
      * @return Genv\Otc\Models\NewWallet
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function walletFind(int $user)
     {

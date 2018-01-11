@@ -17,7 +17,6 @@ class UserNotificationController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(Request $request, ContractResponse $response)
     {
@@ -57,7 +56,6 @@ class UserNotificationController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param string $notification
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ContractResponse $response, string $notification)
     {
@@ -82,7 +80,6 @@ class UserNotificationController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param string $notification
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function markAsRead(Request $request, ContractResponse $response, string $notification = '')
     {

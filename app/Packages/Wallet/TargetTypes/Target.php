@@ -19,7 +19,6 @@ abstract class Target
      * Set the order service.
      *
      * @param \Genv\Otc\Packages\Wallet\Order $order
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function setOrder(Order $order)
     {

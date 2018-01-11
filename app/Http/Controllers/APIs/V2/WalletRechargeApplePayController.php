@@ -15,7 +15,6 @@ class WalletRechargeApplePayController extends WalletRechargeController
      * @param \Genv\Otc\Http\Requests\API2\StoreWalletRecharge; $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function create(StoreWalletRecharge $request, ContractResponse $response)
     {

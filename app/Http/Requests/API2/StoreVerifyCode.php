@@ -1,7 +1,4 @@
 <?php
-
-
-
 namespace Genv\Otc\Http\Requests\API2;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -35,7 +32,6 @@ class StoreVerifyCode extends FormRequest
      * Get the validation messages.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function messages(): array
     {

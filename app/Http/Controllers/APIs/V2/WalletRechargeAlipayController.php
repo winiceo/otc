@@ -21,7 +21,6 @@ class WalletRechargeAlipayController extends WalletRechargeController
      *
      * @param \Genv\Otc\Http\Requests\API2\StoreWalletRecharge $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function create(StoreWalletRecharge $request)
     {
@@ -40,7 +39,6 @@ class WalletRechargeAlipayController extends WalletRechargeController
      *
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function alipayStore(ContractResponse $response)
     {
@@ -61,7 +59,6 @@ class WalletRechargeAlipayController extends WalletRechargeController
      * @param \Genv\Otc\Http\Requests\API2\StoreWalletRecharge $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function alipayWapStore(StoreWalletRecharge $request, ContractResponse $response)
     {

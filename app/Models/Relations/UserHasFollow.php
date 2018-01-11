@@ -13,7 +13,6 @@ trait UserHasFollow
      * follows - my following.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followings(): BelongsToMany
     {
@@ -28,7 +27,6 @@ trait UserHasFollow
      * followers - my followers.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followers(): BelongsToMany
     {
@@ -44,7 +42,6 @@ trait UserHasFollow
      *
      * @param int|\Genv\Otc\Models\User $user
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function hasFollwing($user): bool
     {
@@ -67,7 +64,6 @@ trait UserHasFollow
      *
      * @param  int|\Genv\Otc\Models\User $user
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function hasFollower($user): bool
     {

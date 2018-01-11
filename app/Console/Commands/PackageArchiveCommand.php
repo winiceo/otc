@@ -121,7 +121,6 @@ class PackageArchiveCommand extends Command
      *
      * @return string
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     protected function getPackageInput()
@@ -138,7 +137,6 @@ class PackageArchiveCommand extends Command
      *
      * @return array
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     protected function getArguments()

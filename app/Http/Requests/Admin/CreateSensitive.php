@@ -12,7 +12,6 @@ class CreateSensitive extends FormRequest
      * Determine if the user is authorized to make this request.
      *
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function authorize(): bool
     {
@@ -23,7 +22,6 @@ class CreateSensitive extends FormRequest
      * Get the validation rules that apply to the request.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function rules(): array
     {

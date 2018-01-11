@@ -14636,7 +14636,6 @@ exports.default = {
      * Get pagination props.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     props: function props() {
       var _$props = this.$props;
@@ -14657,7 +14656,6 @@ exports.default = {
      * Get pagination show condition.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     show: function show() {
       return this.limit < this.total;
@@ -14668,7 +14666,6 @@ exports.default = {
      * 是否是第一页.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     onFirstPage: function onFirstPage() {
       return this.offset < this.limit;
@@ -14679,7 +14676,6 @@ exports.default = {
      * 获取前一页页码对应 offset.
      *
      * @return {Number}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     previousPageOffset: function previousPageOffset() {
       if (this.offset > this.limit) {
@@ -14694,7 +14690,6 @@ exports.default = {
      * 是否有下一页.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     hasMorePages: function hasMorePages() {
       return this.total - this.limit > this.offset;
@@ -14705,7 +14700,6 @@ exports.default = {
      * 获取下一页的 offset.
      *
      * @return {Number}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     nextPageOffset: function nextPageOffset() {
       if (this.hasMorePages) {
@@ -14720,7 +14714,6 @@ exports.default = {
      * 获取中间页码数据.
      *
      * @return {Array}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     elements: function elements() {
       var totalPage = this.total / this.limit;

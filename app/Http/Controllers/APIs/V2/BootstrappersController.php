@@ -17,7 +17,6 @@ class BootstrappersController extends Controller
      *
      * @param ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(BootstrapAPIsEventer $events, ResponseFactory $response, AdvertisingSpace $space, GoldType $goldType)
     {
@@ -47,7 +46,6 @@ class BootstrappersController extends Controller
      *
      * @param string $value
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function formatValue(string $value)
     {

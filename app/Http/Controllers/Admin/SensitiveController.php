@@ -17,7 +17,6 @@ class SensitiveController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(Request $request)
     {
@@ -49,7 +48,6 @@ class SensitiveController extends Controller
      *
      * @param \Genv\Otc\Http\Requests\Admin\CreateSensitive $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(CreateSensitiveRequest $request)
     {
@@ -72,7 +70,6 @@ class SensitiveController extends Controller
      * @param \Genv\Otc\Http\Requests\Admin\UpdateSensitive $request
      * @param \Genv\Otc\Models\Sensitive $sensitive
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(UpdateSensitiveRequest $request, SensitiveModel $sensitive)
     {
@@ -97,7 +94,6 @@ class SensitiveController extends Controller
      *
      * @param \Genv\Otc\Models\Sensitive $sensitive
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function destroy(SensitiveModel $sensitive)
     {

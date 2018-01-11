@@ -13,7 +13,6 @@ class TypeManager extends Manager
      * Get default type driver.
      *
      * @return string User type
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getDefaultDriver()
     {
@@ -24,7 +23,6 @@ class TypeManager extends Manager
      * Create user driver.
      *
      * @return \Genv\Otc\Packages\Wallet\Types\Type
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function createUserDriver(): Type
     {

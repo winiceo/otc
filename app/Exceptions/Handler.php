@@ -61,10 +61,15 @@ class Handler extends ExceptionHandler
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Validation\ValidationException $exception
      * @return \Illuminate\Http\JsonResponse
-     * @author Seven Du <shiweidu@outlook.com>
      */
-    protected function invalidJson($request, \Illuminate\Validation\ValidationException $exception)
+    protected function invalidJson($request,  \Illuminate\Validation\ValidationException $exception)
     {
-        return parent::invalidJson($request, new ValidationException($exception));
+
+        return response()->json([
+            'status'=>$exception->status,
+            'message' => $exception->validator->errors()->first()
+        ], $exception->status);
+
+       /// return parent::invalidJson($request, new ValidationException($exception));
     }
 }

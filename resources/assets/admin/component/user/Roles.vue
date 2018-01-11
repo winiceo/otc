@@ -139,7 +139,6 @@ const RolesComponent = {
     /**
      * 创建角色
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     postRole () {
       this.add.adding = true;
@@ -170,7 +169,6 @@ const RolesComponent = {
      * delete this.deleteIds item.
      *
      * @param {Number} id
-     * @author Seven Du <shiweidu@outlook.com>
      */
     deleteIdsItem (id) {
       let ids = {};
@@ -187,7 +185,6 @@ const RolesComponent = {
      *
      * @param {Number} id
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     deleteRole (id) {
       if (window.confirm('是否确认删除？')) {

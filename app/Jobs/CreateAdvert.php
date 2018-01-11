@@ -2,8 +2,8 @@
 
 namespace Genv\Otc\Jobs;
 
-use App\Http\Requests\AdRequest;
-use App\Http\Requests\AdvertRequest;
+
+use Genv\Otc\Http\Requests\API2\AdvertRequest;
 use Genv\Otc\Models\Advert;
 
 use Genv\Otc\Models\User;
@@ -44,7 +44,7 @@ class CreateAdvert
         $this->params=$params;
     }
 
-    public static function fromRequest(AdRequest $request): self
+    public static function fromRequest(AdvertRequest $request): self
     {
         return new static(
             Auth::user(),

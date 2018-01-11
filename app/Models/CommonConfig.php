@@ -21,7 +21,6 @@ class CommonConfig extends Model
      *
      * @return Illuminate\Database\Eloquent\Builder
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByNamespace(Builder $query, string $namespace): Builder
@@ -37,7 +36,6 @@ class CommonConfig extends Model
      *
      * @return Illuminate\Database\Eloquent\Builder
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     public function scopeByName(Builder $query, string $name): Builder

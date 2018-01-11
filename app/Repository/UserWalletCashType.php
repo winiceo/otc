@@ -22,7 +22,6 @@ class UserWalletCashType
     /**
      * Create the cash type respositorie.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(CacheRepository $cache)
     {
@@ -33,7 +32,6 @@ class UserWalletCashType
      * Get wallet types.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(): array
     {
@@ -56,7 +54,6 @@ class UserWalletCashType
      *
      * @param array $types
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(array $types)
     {
@@ -73,7 +70,6 @@ class UserWalletCashType
      * Get the config cache key.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function cacheKey(): string
     {
@@ -84,7 +80,6 @@ class UserWalletCashType
      * Flush all cache.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {

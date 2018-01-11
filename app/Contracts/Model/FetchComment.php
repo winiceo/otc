@@ -10,7 +10,6 @@ interface FetchComment
      * Get comment centent.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getCommentContentAttribute(): string;
 
@@ -18,7 +17,6 @@ interface FetchComment
      * Get target source display title.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getTargetTitleAttribute(): string;
 
@@ -26,7 +24,6 @@ interface FetchComment
      * Get target source image file with ID.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getTargetImageAttribute(): int;
 
@@ -34,7 +31,6 @@ interface FetchComment
      * Get target source id.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function getTargetIdAttribute(): int;
 }

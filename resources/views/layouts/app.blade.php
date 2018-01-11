@@ -22,7 +22,22 @@
         ]); ?>
 
 
-        // window.app=@json($app);
+          window.app=@json($public);
+    </script>
+
+    <script>
+        {{--window.TS = {!!--}}
+            {{--json_encode([--}}
+
+                {{--'api'       => $public['api'],--}}
+                {{--'baseURL'   => $base_url,--}}
+                {{--'csrfToken' => $csrf_token,--}}
+                {{--'logged'    => $logged,--}}
+                {{--'user'      => $user,--}}
+                {{--'token'     => $token,--}}
+
+            {{--])--}}
+        {{--!!};--}}
     </script>
     <!-- Styles -->
     <link href="{{ asset('assets/web/css/app.css') }}" rel="stylesheet">

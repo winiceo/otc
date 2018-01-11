@@ -15,7 +15,6 @@ class Role extends Model
      * Get all abilities of the role.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function abilities()
     {
@@ -26,7 +25,6 @@ class Role extends Model
      * Get all users of the role.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function users()
     {
@@ -38,7 +36,6 @@ class Role extends Model
      *
      * @param string $ability
      * @return false|\User\Plus\Models\Ability
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function ability(string $ability)
     {

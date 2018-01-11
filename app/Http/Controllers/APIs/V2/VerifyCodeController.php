@@ -17,7 +17,6 @@ class VerifyCodeController extends Controller
      *
      * @param \Genv\Otc\Http\Requests\API2\CreateRegisterVerifyCodeRequest $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function storeByRegister(CreateRegisterVerifyCodeRequest $request)
     {
@@ -29,7 +28,6 @@ class VerifyCodeController extends Controller
      *
      * @param \Genv\Otc\Http\Requests\API2\StoreVerifyCode $request [description]
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(StoreVerifyCode $request)
     {
@@ -70,7 +68,6 @@ class VerifyCodeController extends Controller
      * @param string $account
      * @param string $type
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function send(string $account, string $channel = '', array $data = [])
     {
@@ -89,7 +86,6 @@ class VerifyCodeController extends Controller
      *
      * @param string $account
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function validateSent(string $account)
     {

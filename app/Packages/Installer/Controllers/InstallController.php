@@ -14,7 +14,6 @@ class InstallController
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function verifyPassword(Request $request)
     {
@@ -31,7 +30,6 @@ class InstallController
      * Get The LICENSE.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function license()
     {
@@ -44,7 +42,6 @@ class InstallController
      * Get check.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function check()
     {

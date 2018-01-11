@@ -18,7 +18,6 @@ class UserAvatarController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request, ResponseContract $response, UserModel $user)
     {
@@ -35,7 +34,6 @@ class UserAvatarController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function update(Request $request, ResponseContract $response)
     {
@@ -55,7 +53,6 @@ class UserAvatarController extends Controller
      * Get upload valodate rules.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function uploadAvatarRules(): array
     {
@@ -73,7 +70,6 @@ class UserAvatarController extends Controller
      * Get upload validate messages.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function uploadAvatarMessages(): array
     {
@@ -89,7 +85,6 @@ class UserAvatarController extends Controller
      * Get upload max file size.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getMaxFilesize()
     {

@@ -368,7 +368,6 @@ export default {
      *
      * @param {Number} id
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestCashRefuse(id) {
       // 备注
@@ -426,7 +425,6 @@ export default {
      *
      * @param {Number} id
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestCashPassed(id) {
       // 备注
@@ -484,7 +482,6 @@ export default {
      *
      * @param {Object} query
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestCashes(query = {}) {
       this.loading = true;
@@ -521,7 +518,6 @@ export default {
      * @param {[type]} message [description]
      * @param {Boolean} success [description]
      * @return {[type]} [description]
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendModal(message, success = true, time = 1500) {
       window.clearInterval(this.modal.interval);
@@ -542,7 +538,6 @@ export default {
      * @param {string} type
      * @param {string} message
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendAlert(type, message, hide = true) {
       window.clearInterval(this.alert.interval);
@@ -564,7 +559,6 @@ export default {
      *
      * @param {Object} query
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolveStatus2Query(query = {}) {
       return { ...this.query, page: this.page.current, ...query };
@@ -574,7 +568,6 @@ export default {
      * 解决网页请求参数.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     resolveQueryString(route = false) {
       const {

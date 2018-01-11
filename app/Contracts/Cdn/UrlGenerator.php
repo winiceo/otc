@@ -14,7 +14,6 @@ interface UrlGenerator
      * @param string $filename
      * @param array $extra "[float $width, float $height, int $quality]"
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function url(string $filename, array $extra = []): string;
 
@@ -23,7 +22,6 @@ interface UrlGenerator
      *
      * @param \Genv\Otc\Cdn\Refresh $refresh
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refresh(Refresh $refresh);
 }

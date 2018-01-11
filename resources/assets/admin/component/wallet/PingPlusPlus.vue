@@ -115,7 +115,6 @@ export default {
      * Request Ping++ config.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     requestConfig() {
       this.load.status = 0;
@@ -140,7 +139,6 @@ export default {
      * Update Ping++ config.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     updateConfig() {
       this.updating = true;
@@ -165,7 +163,6 @@ export default {
      * @param {String} type
      * @param {String} message
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     sendAlert(type, message) {
       window.clearInterval(this.alert.interval);

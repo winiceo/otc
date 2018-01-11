@@ -1,1 +1,1 @@
-export const apiUrl = '/api/v2'
+export const apiUrl = '/api/v1'

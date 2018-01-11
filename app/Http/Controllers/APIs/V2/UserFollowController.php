@@ -17,7 +17,6 @@ class UserFollowController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followers(Request $request, ResponseFactoryContract $response, UserModel $user)
     {
@@ -47,7 +46,6 @@ class UserFollowController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\User $user
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function followings(Request $request, ResponseFactoryContract $response, UserModel $user)
     {

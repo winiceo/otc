@@ -17,7 +17,6 @@ class TagUserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function index(Request $request, ResponseFactoryContract $response)
     {
@@ -31,7 +30,6 @@ class TagUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\Tag $tag
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(Request $request, ResponseFactoryContract $response, TagModel $tag)
     {
@@ -58,7 +56,6 @@ class TagUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @param \Genv\Otc\Models\Tag $tag
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function destroy(Request $request, ResponseFactoryContract $response, TagModel $tag)
     {
@@ -85,7 +82,6 @@ class TagUserController extends Controller
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response [description]
      * @param \Genv\Otc\Models\User $user [description]
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function userTgas(ResponseFactoryContract $response, UserModel $user)
     {

@@ -20,7 +20,6 @@ abstract class CdnUrlGenerator implements FileUrlGeneratorContract
      * Get file data model.
      *
      * @return \Genv\Otc\Models\File
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getFile(): File
     {
@@ -31,7 +30,6 @@ abstract class CdnUrlGenerator implements FileUrlGeneratorContract
      * Set file data model.
      *
      * @param \Genv\Otc\Models\File $file
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function setFile(File $file)
     {

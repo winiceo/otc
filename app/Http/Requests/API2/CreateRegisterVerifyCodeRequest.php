@@ -35,7 +35,6 @@ class CreateRegisterVerifyCodeRequest extends FormRequest
      * Get the validation messages.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function messages()
     {

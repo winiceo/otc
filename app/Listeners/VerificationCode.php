@@ -30,7 +30,6 @@ class VerificationCode implements ShouldQueue
      * @param \Illuminate\Notifications\Events\NotificationSent $event
      * @param mixed $exception
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function failed(NotificationSent $event, $exception)
     {
@@ -47,7 +46,6 @@ class VerificationCode implements ShouldQueue
      *
      * @param mixed $notifiable
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function validate($notifiable): bool
     {

@@ -38,7 +38,6 @@ class AliOss implements FileUrlGeneratorContract
      *
      * @param \Genv\Otc\Services\Storage $service
      * @param string $key
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct()
     {
@@ -60,7 +59,6 @@ class AliOss implements FileUrlGeneratorContract
      * @param string $filename
      * @param array $extra
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function url(string $filename, array $extra = []):string
     {
@@ -80,7 +78,6 @@ class AliOss implements FileUrlGeneratorContract
      *
      * @param \Genv\Otc\Cdn\Refresh $refresh
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function refresh(Refresh $refresh)
     {
@@ -130,7 +127,6 @@ class AliOss implements FileUrlGeneratorContract
      * @param string $filename
      * @param array $extra
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function makePublicURL(string $filename, array $extra): string
     {
@@ -194,7 +190,6 @@ class AliOss implements FileUrlGeneratorContract
      *
      * @param string $filename
      * @return bool
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function isImage(string $filename): bool
     {
@@ -208,7 +203,6 @@ class AliOss implements FileUrlGeneratorContract
      * @param array $query
      * @throws \Exception
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveQueryString(string $url, array $query = []): string
     {
@@ -234,7 +228,6 @@ class AliOss implements FileUrlGeneratorContract
      * @param string $query1 [description]
      * @param string $query2 [description]
      * @return [type] [description]
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function mergeHttpQueryString(string $query1 = '', string $query2 = ''): string
     {
@@ -254,7 +247,6 @@ class AliOss implements FileUrlGeneratorContract
      *
      * @param string $filename
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function filterSlash(string $filename): string
     {
@@ -277,7 +269,6 @@ class AliOss implements FileUrlGeneratorContract
      *
      * @param string $endpoint
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getBaseURI(string $endpoint = ''): string
     {
@@ -298,7 +289,6 @@ class AliOss implements FileUrlGeneratorContract
      * Get scheme.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getScheme(): string
     {

@@ -22,7 +22,6 @@ class WalletRatio
     /**
      * Create the cash type respositorie.
      *
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(CacheRepository $cache)
     {
@@ -33,7 +32,6 @@ class WalletRatio
      * Get the ratio.
      *
      * @return int
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(): int
     {
@@ -56,7 +54,6 @@ class WalletRatio
      *
      * @param int $ratio
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(int $ratio)
     {
@@ -73,7 +70,6 @@ class WalletRatio
      * Get the config cache key.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function cacheKey(): string
     {
@@ -84,7 +80,6 @@ class WalletRatio
      * Flush all cache.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {

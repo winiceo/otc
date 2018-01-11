@@ -54,7 +54,6 @@ export default {
      * Get pagination props.
      *
      * @return {Object}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     props() {
       const { total: {}, offset: {}, limit: {}, ...props } = this.$props;
@@ -66,7 +65,6 @@ export default {
      * Get pagination show condition.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     show() {
       return this.limit < this.total;
@@ -76,7 +74,6 @@ export default {
      * 是否是第一页.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     onFirstPage() {
       return this.offset < this.limit;
@@ -86,7 +83,6 @@ export default {
      * 获取前一页页码对应 offset.
      *
      * @return {Number}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     previousPageOffset() {
       if (this.offset > this.limit) {
@@ -100,7 +96,6 @@ export default {
      * 是否有下一页.
      *
      * @return {Boolean}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     hasMorePages() {
       return (this.total - this.limit) > this.offset;
@@ -110,7 +105,6 @@ export default {
      * 获取下一页的 offset.
      *
      * @return {Number}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     nextPageOffset() {
       if (this.hasMorePages) {
@@ -124,7 +118,6 @@ export default {
      * 获取中间页码数据.
      *
      * @return {Array}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     elements() {
       let totalPage = this.total / this.limit;

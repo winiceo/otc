@@ -44,7 +44,6 @@ class WalletConfigController extends Controller
      *
      * @param ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(ResponseFactory $response)
     {
@@ -78,7 +77,6 @@ class WalletConfigController extends Controller
      * @param Collection &$options
      * @param CommonConfig $item
      * @return vodi
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolve(Collection &$options, CommonConfig $item)
     {
@@ -96,7 +94,6 @@ class WalletConfigController extends Controller
      * @param string $type
      * @param mixed $value
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function formatData(string $type, $value)
     {

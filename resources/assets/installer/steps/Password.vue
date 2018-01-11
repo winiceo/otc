@@ -41,7 +41,6 @@ export default {
      * Submitting password.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     handleSubmit () {
       this.submitting = true;
@@ -59,7 +58,6 @@ export default {
      * The password input focus set formatting to true.
      *
      * @return {void}
-     * @author Seven Du <shiweidu@outlook.com>
      */
     handleFocus () {
       this.error = null;

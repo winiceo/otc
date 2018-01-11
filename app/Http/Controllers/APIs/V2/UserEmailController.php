@@ -16,7 +16,6 @@ class UserEmailController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function delete(Request $request, ResponseFactoryContract $response)
     {

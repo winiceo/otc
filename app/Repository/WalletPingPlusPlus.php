@@ -20,7 +20,6 @@ class WalletPingPlusPlus
      * Create the repository instance.
      *
      * @param \Illuminate\Contracts\Cache\Repository $cache
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function __construct(ContractsCacheRepository $cache)
     {
@@ -31,7 +30,6 @@ class WalletPingPlusPlus
      * Get the Ping++ configuration.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function get(): array
     {
@@ -57,7 +55,6 @@ class WalletPingPlusPlus
      *
      * @param array $config
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(array $config)
     {
@@ -74,7 +71,6 @@ class WalletPingPlusPlus
      * Get the config cache key.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function cacheKey(): string
     {
@@ -85,7 +81,6 @@ class WalletPingPlusPlus
      * Flush all cache.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function flush()
     {
@@ -103,7 +98,6 @@ class WalletPingPlusPlus
      *
      * @param array $config
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resolveConfig(array $config = []): array
     {

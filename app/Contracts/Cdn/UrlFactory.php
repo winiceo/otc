@@ -13,7 +13,6 @@ interface UrlFactory
      *
      * @param string $name
      * @return \Genv\Otc\Contracts\Cdn\UrlGenerator
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function generator(string $name = ''): UrlGenerator;
 
@@ -24,7 +23,6 @@ interface UrlFactory
      * @param array $extra
      * @param string $name
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function make(File $file, array $extra = [], string $name = ''): string;
 }

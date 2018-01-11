@@ -51,7 +51,6 @@ class Kernel extends ConsoleKernel
      * Get the Artisan application instance.
      *
      * @return \Illuminate\Console\Application
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getArtisan()
     {

@@ -30,7 +30,6 @@ class LoginController extends Controller
      * Show the application's login form.
      *
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function showLoginForm(Repository $config)
     {
@@ -46,7 +45,6 @@ class LoginController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function login(Request $request)
     {
@@ -61,7 +59,6 @@ class LoginController extends Controller
      * Get the login username to be used by the controller.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function username(): string
     {
@@ -74,7 +71,6 @@ class LoginController extends Controller
      * Get the post register / login redirect path.
      *
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function redirectTo(): string
     {

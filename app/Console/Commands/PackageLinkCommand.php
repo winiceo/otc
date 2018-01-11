@@ -46,7 +46,6 @@ class PackageLinkCommand extends Command
      * Perform the operation.
      *
      * @return void
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function handle()
     {
@@ -76,7 +75,6 @@ class PackageLinkCommand extends Command
      *
      * @param string $package
      * @return string
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getComponentVendorDir(string $package): string
     {
@@ -90,7 +88,6 @@ class PackageLinkCommand extends Command
      * Get root package information.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getRootComposer(): array
     {
@@ -110,7 +107,6 @@ class PackageLinkCommand extends Command
      *
      * @param string $package
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getComponentComposer(string $package): array
     {
@@ -130,7 +126,6 @@ class PackageLinkCommand extends Command
      *
      * @param string $package
      * @return component dir
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function getSourceDir(string $package): string
     {
@@ -148,7 +143,6 @@ class PackageLinkCommand extends Command
      *
      * @return string
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     protected function getPackageInput(): string
@@ -165,7 +159,6 @@ class PackageLinkCommand extends Command
      *
      * @return array
      *
-     * @author Seven Du <shiweidu@outlook.com>
      * @homepage http://medz.cn
      */
     protected function getArguments()

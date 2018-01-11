@@ -17,7 +17,6 @@ class WalletCashController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function show(Request $request)
     {
@@ -44,7 +43,6 @@ class WalletCashController extends Controller
      *
      * @param \Genv\Otc\Http\Requests\API2\StoreUserWallerCashPost $request
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function store(StoreUserWallerCashPost $request, TypeManager $manager)
     {

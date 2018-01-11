@@ -18,7 +18,6 @@ class ResetPasswordController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param \Illuminate\Contracts\Routing\ResponseFactory $response
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function reset(Request $request, ResponseFactoryContract $response)
     {
@@ -51,7 +50,6 @@ class ResetPasswordController extends Controller
      * Get reset validateion rules.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resetRules(): array
     {
@@ -65,7 +63,6 @@ class ResetPasswordController extends Controller
      * Get reset validation error messages.
      *
      * @return array
-     * @author Seven Du <shiweidu@outlook.com>
      */
     protected function resetValidationErrorMessages(): array
     {
@@ -106,7 +103,6 @@ class ResetPasswordController extends Controller
      * @param \Genv\Otc\Models\VerificationCode $verificationCodeModel
      * @param \Genv\Otc\Models\User $userModel
      * @return mixed
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function retrieve(Request $request,
                              ResponseFactoryContract $response,

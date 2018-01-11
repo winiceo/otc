@@ -12,7 +12,6 @@ class Comment extends Model
      * Has commentable.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function commentable()
     {
@@ -23,7 +22,6 @@ class Comment extends Model
      * Has a user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user()
     {

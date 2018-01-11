@@ -19,7 +19,6 @@ class Like extends Model
      * Has likeable.
      *
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function likeable()
     {
@@ -30,7 +29,6 @@ class Like extends Model
      * Has user of the likeable.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     * @author Seven Du <shiweidu@outlook.com>
      */
     public function user()
     {
